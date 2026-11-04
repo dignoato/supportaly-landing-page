@@ -1,1 +1,1 @@
-# suppotaly-landing-page
+# supportaly-landing-page
