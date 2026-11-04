@@ -68,6 +68,19 @@ The output is written to `artifacts/visual-comparison/{local,live}/`. Compare ma
 
 See `migration/VISUAL_COMPARISON.md` for the current evidence and blockers.
 
+## Vercel preview
+
+Run the same artifact Vercel will publish:
+
+```bash
+node scripts/build-independent.mjs
+node scripts/test-vercel-output.mjs
+python3 -m http.server 4174 --bind 127.0.0.1 --directory dist
+python3 scripts/test-browser.py http://127.0.0.1:4174
+```
+
+Vercel configuration and the safe GitHub connection flow are documented in `VERCEL_PREVIEW.md`. Vercel must publish `dist`; publishing the repository root would bypass the isolation layer and is prohibited.
+
 ## Step 1 limitations
 
 - Authentication, registration, member profiles, cart, checkout, purchase history, and Wix-backed business data are intentionally disabled.

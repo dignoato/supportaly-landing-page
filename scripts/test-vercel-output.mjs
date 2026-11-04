@@ -1,0 +1,58 @@
+#!/usr/bin/env node
+
+import assert from 'node:assert/strict';
+import { existsSync } from 'node:fs';
+import { readdir, readFile } from 'node:fs/promises';
+import { extname, join } from 'node:path';
+import { projectRoot } from './serve-independent.mjs';
+
+const outputRoot = join(projectRoot, 'dist');
+const routes = JSON.parse(await readFile(join(projectRoot, '_wix', 'pages.json'), 'utf8'));
+const forbiddenFiles = ['account.js', 'login.js', 'member-nav.js', 'wix-client.js'];
+const forbiddenPatterns = [
+  /id=["']wix-site-script["']/i,
+  /manage\.wix\.com\/_api\/headless-business-setup/i,
+  /www\.wixapis\.com/i,
+  /src=["'](?:\.\/)?(?:account|login|member-nav|wix-client)\.js/i
+];
+
+assert.ok(existsSync(outputRoot), 'dist must exist; run node scripts/build-independent.mjs');
+
+for (const { path } of routes) {
+  const file = path === '/' ? 'index.html' : path.replace(/^\//, '');
+  const absolute = join(outputRoot, file);
+  assert.ok(existsSync(absolute), `${path} must exist in dist`);
+  const html = await readFile(absolute, 'utf8');
+  for (const pattern of forbiddenPatterns) assert.doesNotMatch(html, pattern, `${path} contains ${pattern}`);
+}
+
+for (const file of forbiddenFiles) {
+  assert.equal(existsSync(join(outputRoot, file)), false, `${file} must not be deployed`);
+}
+
+const textFiles = [];
+async function collect(directory) {
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const absolute = join(directory, entry.name);
+    if (entry.isDirectory()) await collect(absolute);
+    else if (['.html', '.js', '.json'].includes(extname(entry.name))) textFiles.push(absolute);
+  }
+}
+await collect(outputRoot);
+
+for (const file of textFiles) {
+  const text = await readFile(file, 'utf8');
+  assert.doesNotMatch(text, /manage\.wix\.com\/_api\/headless-business-setup/i, `${file} loads Wix bootstrap`);
+  assert.doesNotMatch(text, /www\.wixapis\.com/i, `${file} loads Wix APIs`);
+}
+
+const status = JSON.parse(await readFile(join(outputRoot, '__migration', 'status.json'), 'utf8'));
+assert.equal(status.wixRuntimeLoaded, false);
+assert.deepEqual(status.excludedRuntimeFiles, [...forbiddenFiles].sort());
+
+console.log(`routes=${routes.length}`);
+console.log(`text-files-scanned=${textFiles.length}`);
+console.log(`local-media=${status.media.local}`);
+console.log(`unresolved-media=${status.media.unresolved.length}`);
+console.log('wix-runtime-files=excluded');
+console.log('vercel-output=ok');
