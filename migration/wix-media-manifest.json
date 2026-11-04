@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "source": "docs/EXTERNAL_ASSETS.csv",
+  "assets": [
+    {"url":"https://static.wixstatic.com/media/53e940_0b6db3d9c3d344a5b19c450bb484b4ab~mv2.png","referencedBy":["index.html","product-01-start-here.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_0f0aee3f62ea4e02b43e32159c7ed8b0~mv2.png","referencedBy":["index.html"],"localEquivalent":"assets/messages.webp"},
+    {"url":"https://static.wixstatic.com/media/53e940_1838e098ceb74253a5e7b016c8ba3a6c~mv2.jpg","referencedBy":["index.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_2ad77f6e8ea2470aa09eef4024b643e2~mv2.png","referencedBy":["index.html","product-06-filled-example.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_4c3f1b5ec3ec4fecbe3525baf1ab767f~mv2.jpg","referencedBy":["index.html","product-02-client-workbook.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_4c96ea50bd1f439287deae7db053ef23~mv2.png","referencedBy":["index.html","product-01-start-here.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_589bd7d64cab43febc108bff05eb877f~mv2.png","referencedBy":["index.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_66dbd92942cc4ee492e5be9743b3eb3f~mv2.png","referencedBy":["index.html","supportaly-guided-check.js"],"localEquivalent":"assets/decision-page.webp"},
+    {"url":"https://static.wixstatic.com/media/53e940_73f7d4a7c63b4e78934252157f4beeb1~mv2.png","referencedBy":["index.html"],"localEquivalent":"assets/decision.webp"},
+    {"url":"https://static.wixstatic.com/media/53e940_7bc981bf2e674f7284ec04d069f1eb70~mv2.png","referencedBy":["index.html","product-06-filled-example.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_7d26e70c4db64b00b7e3f0e2ba845251~mv2.png","referencedBy":["index.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_818fc38c919340e788f83e1c6ed92e8c~mv2.png","referencedBy":["index.html","product-02-client-workbook.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_87fb1f5642d44089ac41a4a3c9a3f791~mv2.png","referencedBy":["index.html","product-03-architect-handover.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_9bcce621740b498a920bf24288a84b1f~mv2.png","referencedBy":["index.html","product-06-filled-example.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_a30e8505264d46c1b8fad71de26b701a~mv2.png","referencedBy":["index.html","product-03-architect-handover.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_b17503ba54ed4e10b8b86d178065aa73~mv2.png","referencedBy":["index.html","product-clarity-kit-bundle.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_c5e0bf46a51b4e7d970276d3f28f6122~mv2.png","referencedBy":["index.html","product-clarity-kit-bundle.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_e1e58ff5c94d49d3a328e1bc1e696be1~mv2.png","referencedBy":["index.html","product-01-start-here.html","product-02-client-workbook.html","product-03-architect-handover.html","product-04-decision-card.html","product-05-message-starters.html","product-06-filled-example.html","product-clarity-kit-bundle.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_eae9808cda1a4fa193eb2f2ec1141714~mv2.png","referencedBy":["index.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_ee843c7160f74b61bfb360f540129a1d~mv2.png","referencedBy":["index.html","product-01-start-here.html","product-02-client-workbook.html","product-03-architect-handover.html","product-04-decision-card.html","product-05-message-starters.html","product-06-filled-example.html","product-clarity-kit-bundle.html"]},
+    {"url":"https://static.wixstatic.com/media/53e940_fb25ef1d76ec498c96928fe032e54090~mv2.png","referencedBy":["index.html","product-01-start-here.html","product-02-client-workbook.html","product-03-architect-handover.html","product-04-decision-card.html","product-05-message-starters.html","product-06-filled-example.html","product-clarity-kit-bundle.html"]}
+  ]
+}
