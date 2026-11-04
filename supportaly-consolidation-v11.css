@@ -1,0 +1,123 @@
+/* SUPPORTALY — landing-page consolidation V11 — 26 Oct 2026
+   Final cascade layer: spacing + editorial typography only. No content/layout redesign. */
+:root{
+  --su-space-xs:clamp(10px,1vw,14px);
+  --su-space-sm:clamp(16px,1.6vw,24px);
+  --su-space-md:clamp(24px,2.7vw,40px);
+  --su-space-lg:clamp(40px,5vw,72px);
+  --su-space-xl:clamp(58px,7vw,96px);
+}
+/* Shared editorial rhythm: label / heading / supporting copy. */
+main .v6-chapter .section-index{
+  margin-bottom:var(--su-space-lg);
+}
+main .section-heading>.eyebrow{
+  margin:0 0 var(--su-space-sm);
+}
+main .section-heading>h2{
+  margin-bottom:0!important;
+}
+main .section-heading>h2+p:not(.eyebrow),
+main .comparison-intro>h2+p,
+main .faq-heading>h2+p{
+  margin-top:var(--su-space-md)!important;
+}
+/* Editorial explanatory copy: consistent serif voice where it is not UI/body copy. */
+main .v6-simple .section-heading p:not(.eyebrow),
+main .v6-kit .kit-intro,
+main .v6-preview .section-heading p:not(.eyebrow),
+main .v6-how .section-heading p:not(.eyebrow),
+main .v6-qualification .section-heading p:not(.eyebrow),
+main .v6-comparison .comparison-intro p,
+main .v6-final .final-copy p{
+  font-family:var(--supportaly-serif,"Iowan Old Style",Baskerville,Georgia,serif)!important;
+  font-style:normal!important;
+  letter-spacing:-.012em!important;
+}
+/* A SIMPLE WAY TO START — give the professional link a proper ending before the divider. */
+main .v6-simple .section-heading{
+  margin-bottom:0;
+}
+main .v6-simple .section-heading p:first-of-type{
+  margin-top:var(--su-space-md)!important;
+}
+main .v6-simple .section-heading p+p{
+  margin-top:var(--su-space-xs)!important;
+  margin-bottom:clamp(56px,6vw,86px)!important;
+}
+main .v6-simple .three-steps{
+  margin-top:0!important;
+}
+/* THE CLARITY KIT — title and intro are one typographic unit, not collapsed together. */
+main .v6-kit .section-heading{
+  margin-bottom:0!important;
+}
+main .v6-kit .section-heading>.eyebrow{
+  margin-bottom:var(--su-space-sm)!important;
+}
+main .v6-kit .kit-intro-controls{
+  margin-top:clamp(30px,4vw,54px)!important;
+  margin-bottom:clamp(28px,3.8vw,48px)!important;
+  align-items:flex-end;
+}
+main .v6-kit .kit-intro-controls .kit-intro,
+main .v6-kit .kit-intro{
+  margin:0!important;
+  max-width:720px;
+  font-family:var(--supportaly-serif,"Iowan Old Style",Baskerville,Georgia,serif)!important;
+  font-size:clamp(18px,1.75vw,24px)!important;
+  line-height:1.42!important;
+  letter-spacing:-.014em!important;
+  color:#3f443e;
+}
+main .v6-kit .kit-nav{
+  margin-bottom:2px;
+}
+/* Preview / How / Fit: match the same title-to-copy rhythm where older rules diverged. */
+main .v6-preview .section-heading p:first-of-type,
+main .v6-how .section-heading p:first-of-type,
+main .v6-qualification .section-heading p:first-of-type{
+  margin-top:var(--su-space-md)!important;
+}
+main .v6-preview .section-heading p+p,
+main .v6-how .section-heading p+p,
+main .v6-qualification .section-heading p+p{
+  margin-top:var(--su-space-xs)!important;
+}
+/* YOUR NEXT STEP — restore breathing room before the chapter label and after it. */
+main .v6-final{
+  padding-top:clamp(58px,7vw,96px)!important;
+}
+main .v6-final>.section-index{
+  position:relative;
+  margin-bottom:clamp(52px,6vw,86px)!important;
+}
+main .v6-final .final-copy{
+  margin-top:0!important;
+}
+main .v6-final .final-copy h2{
+  margin-bottom:var(--su-space-md)!important;
+}
+main .v6-final .final-copy p+p{
+  margin-top:var(--su-space-xs)!important;
+}
+/* Section transitions: keep content from visually touching the preceding rule. */
+main .v6-offer .supportaly-note,
+main .v6-faq .faq-heading{
+  padding-top:var(--su-space-sm);
+}
+/* Mobile: preserve breathing room without making sections overly long. */
+@media(max-width:767px){
+  main .v6-chapter .section-index{margin-bottom:clamp(30px,8vw,42px)}
+  main .v6-simple .section-heading p+p{margin-bottom:46px!important}
+  main .v6-kit .kit-intro-controls{margin-top:28px!important;margin-bottom:28px!important;align-items:flex-start}
+  main .v6-kit .kit-intro-controls .kit-intro,main .v6-kit .kit-intro{font-size:18px!important;line-height:1.46!important}
+  main .v6-final{padding-top:52px!important}
+  main .v6-final>.section-index{margin-bottom:44px!important}
+}
+
+/* H3 weight normalization — 2026-10-26 */
+main h3{font-weight:635!important;}
+
+/* Menu text weight normalization — 2026-10-26 */
+.site-header nav a, .site-header .header-actions a, .editorial-menu a, .menu-top a, .site-footer .footer-nav a, .account-tabs a{font-weight:630!important;}

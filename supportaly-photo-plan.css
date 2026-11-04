@@ -1,0 +1,110 @@
+
+/* SUPPORTALY RESPONSIVE PHOTOGRAPHY SYSTEM — 2026-10-22
+   Architectural photography is hidden in the presentation and replaced
+   by proportion-locked, named planning slots. Product visuals are untouched.
+   Each F-number maps to one specific artwork and one fixed aspect ratio.
+   The DOM shares artwork IDs across device-specific compositions.
+   DESKTOP >=1200; TABLET 768-1199; MOBILE <=767. */
+.photo-plan{--slot-gap:10px;display:grid;grid-template-columns:minmax(0,1fr);gap:var(--slot-gap);width:100%;min-width:0;margin:0;}
+.photo-plan .photo-slot{display:none;position:relative;min-width:0;width:100%;aspect-ratio:var(--slot-aspect);background:#e7e8e4;overflow:hidden;isolation:isolate;align-items:center;justify-content:center;flex-direction:column;gap:7px;text-align:center;color:#161918;border-radius:0;}
+.photo-plan .photo-slot::before{content:"";position:absolute;inset:14px;border:1px solid rgba(23,27,22,.16);pointer-events:none;}
+.photo-plan .photo-slot::after{content:"+";position:absolute;top:25px;right:28px;font-size:22px;font-weight:350;line-height:1;opacity:.3;}
+.photo-plan .photo-slot__id{font-size:clamp(30px,5vw,72px);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;letter-spacing:-.08em;line-height:1;font-weight:730;}
+.photo-plan .photo-slot__ratio{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;font-size:clamp(14px,1.5vw,20px);font-weight:550;line-height:1.25;letter-spacing:.02em;}
+.photo-plan .photo-slot__views{position:absolute;left:26px;bottom:24px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5c625d;text-align:left;}
+.photo-plan--hero{margin:20px 0 0;}
+.photo-plan--problem{margin:60px 0 0;}
+.photo-plan--pattern{grid-column:1;align-self:start;min-width:0;margin:0;}
+.photo-plan--clarity{margin:0 0 80px;}
+.photo-plan--qualification{min-width:0;align-self:start;grid-column:auto;height:auto!important;padding:0!important;margin:0!important;}
+.photo-plan--professional{min-width:0;align-self:start;height:auto!important;margin:0!important;}
+.photo-plan--final{position:relative!important;inset:auto!important;height:auto!important;min-height:0!important;z-index:1;margin:14px 0 0;}
+.photo-plan--hero .photo-slot,.photo-plan--final .photo-slot{min-width:0;}
+/* Final CTA: fixed photo ratios are achieved by placing the media before
+   the copy, rather than forcing a background into an arbitrary height. */
+.v6-final{display:block!important;min-height:0!important;background:#191b19!important;color:#fff!important;overflow:visible!important;padding-bottom:clamp(72px,8vw,130px)!important;}
+.v6-final .section-index{z-index:1;position:relative;}
+.v6-final .final-overlay{display:none!important;}
+.v6-final .final-copy{position:relative!important;inset:auto!important;max-width:1170px;padding:0!important;margin:clamp(52px,6vw,90px) 0 0!important;z-index:1;}
+.v6-final .final-copy h2{max-width:1120px;}
+/* Pattern's image was previously defined as a background in the old
+   stylesheet. The media node has been replaced; this is a safety override. */
+.v6-pattern .pattern-image{background:none!important;filter:none!important;}
+@media (min-width:1200px){
+  .photo-plan .photo-slot[data-views~="desktop"]{display:flex;}
+  /* Alternating split sequence: hero 7+9, problem 9+7, clarity 7+9, final 9+7.
+     Equal split alternative supported: 8:7 + 8:7. */
+  .photo-plan--hero,.photo-plan--clarity{grid-template-columns:minmax(0,7fr) minmax(0,9fr);gap:10px;}
+  .photo-plan--problem,.photo-plan--final{grid-template-columns:minmax(0,9fr) minmax(0,7fr);gap:10px;}
+  .photo-plan--hero .photo-slot[data-photo-id="F1"],
+  .photo-plan--problem .photo-slot[data-photo-id="F3"],
+  .photo-plan--clarity .photo-slot[data-photo-id="F8"],
+  .photo-plan--final .photo-slot[data-photo-id="F13"]{grid-column:1;grid-row:1;}
+  .photo-plan--hero .photo-slot[data-photo-id="F2"],
+  .photo-plan--problem .photo-slot[data-photo-id="F16"],
+  .photo-plan--clarity .photo-slot[data-photo-id="F17"],
+  .photo-plan--final .photo-slot[data-photo-id="F12"]{grid-column:2;grid-row:1;}
+}
+@media (min-width:768px) and (max-width:1199px){
+  .photo-plan .photo-slot[data-views~="tablet"]{display:flex;}
+  .photo-plan--hero,.photo-plan--final{grid-template-columns:minmax(0,1fr);}
+  .photo-plan--problem{margin-top:48px;}
+  .photo-plan--clarity{margin-bottom:60px;}
+  .photo-plan--qualification{grid-column:1/-1!important;}
+  .photo-plan--professional{grid-column:1/-1!important;}
+}
+@media (max-width:767px){
+  .photo-plan .photo-slot[data-views~="mobile"]{display:flex;}
+  .photo-plan{--slot-gap:0;}
+  .photo-plan--hero{margin-top:16px;}
+  .photo-plan--problem{margin-top:36px;}
+  .photo-plan--clarity{margin-bottom:43px;}
+  .photo-plan--qualification{grid-column:1/-1!important;}
+  .photo-plan--professional{grid-column:1/-1!important;}
+  .photo-plan .photo-slot::before{inset:9px;}
+  .photo-plan .photo-slot::after{top:18px;right:18px;}
+  .photo-plan .photo-slot__id{font-size:clamp(34px,10vw,59px);}
+  .photo-plan .photo-slot__ratio{font-size:15px;}
+  .photo-plan .photo-slot__views{bottom:19px;left:18px;font-size:9px;}
+  .v6-final .final-copy{margin-top:46px!important;}
+}
+
+/* Loaded architectural photographs F1–F17, 22 October 2026. */
+.photo-plan .photo-slot::before,.photo-plan .photo-slot::after{display:none!important;}
+.photo-plan .photo-slot__id,.photo-plan .photo-slot__ratio,.photo-plan .photo-slot__views{display:none!important;}
+.photo-plan .photo-slot__image{display:block;position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center;filter:none;border:0;}
+
+/* SUPPORTALY photo refinement 2026-10-23. Desktop >=1200 / tablet 768–1199 / mobile <=767. */
+.photo-plan .photo-slot__picture{position:absolute;inset:0;display:block;width:100%;height:100%;}
+.photo-plan .photo-slot__picture .photo-slot__image{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center;}
+.photo-plan--qualification{margin:clamp(25px,3.5vw,52px) 0 clamp(26px,3.5vw,50px)!important;padding:0!important;width:100%;grid-column:1/-1!important;}
+.v6-qualification .qualification-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:clamp(18px,4vw,65px)!important;margin-top:20px!important;}
+.photo-plan--professional{display:grid!important;width:100%!important;min-width:0!important;}
+.photo-plan--professional .photo-slot__image{display:block!important;}
+.v6-final{position:relative!important;isolation:isolate!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;min-height:clamp(670px,76vh,1000px)!important;background-color:#141613!important;background-image:linear-gradient(rgba(0,0,0,.30),rgba(0,0,0,.30)),url('assets/editorial/F12.webp')!important;background-repeat:no-repeat!important;background-size:cover!important;background-position:center 48%!important;color:#fff!important;padding:0 var(--g) clamp(78px,9vw,130px)!important;}
+.v6-final .section-index{position:relative!important;z-index:1!important;color:#fff!important;}
+.v6-final .final-copy{position:relative!important;z-index:2!important;margin:clamp(160px,18vh,260px) 0 0!important;padding:0!important;color:#fff!important;}
+.v6-final .final-copy h2{color:#fff!important;text-shadow:0 2px 17px rgba(0,0,0,.28);}
+.v6-final .final-copy p{color:#fff!important;text-shadow:0 2px 8px rgba(0,0,0,.3);}
+.v6-final .final-copy .button{position:relative;z-index:3;}
+@media(min-width:1200px){
+.photo-plan--hero,.photo-plan--clarity{grid-template-columns:minmax(0,7fr) minmax(0,9fr)!important;gap:10px!important;}
+.photo-plan--problem,.photo-plan--qualification{grid-template-columns:minmax(0,9fr) minmax(0,7fr)!important;gap:10px!important;}
+.photo-plan--hero [data-photo-id="F17"],.photo-plan--problem [data-photo-id="F3"],.photo-plan--clarity [data-photo-id="F8"],.photo-plan--qualification [data-photo-id="F4"]{grid-column:1!important;grid-row:1!important;}
+.photo-plan--hero [data-photo-id="F2"],.photo-plan--problem [data-photo-id="F5"],.photo-plan--clarity [data-photo-id="F18"],.photo-plan--qualification [data-photo-id="F19"]{grid-column:2!important;grid-row:1!important;}
+}
+@media (min-width:768px) and (max-width:1199px){
+.photo-plan--hero,.photo-plan--problem,.photo-plan--clarity,.photo-plan--qualification{grid-template-columns:minmax(0,1fr)!important;}
+.v6-pattern{grid-template-columns:minmax(0,1fr)!important;}
+.photo-plan--pattern{grid-column:1/-1!important;width:100%!important;max-width:none!important;}
+.v6-pattern .pattern-copy{grid-column:1/-1!important;min-width:0!important;}
+.v6-qualification .qualification-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+@media(max-width:767px){
+.photo-plan--hero [data-photo-id="F2"]{aspect-ratio:1/1!important;}
+.photo-plan--pattern [data-photo-id="F6"]{aspect-ratio:1/1!important;}
+.photo-plan--hero,.photo-plan--problem,.photo-plan--clarity,.photo-plan--qualification{grid-template-columns:minmax(0,1fr)!important;}
+.v6-qualification .qualification-grid{grid-template-columns:minmax(0,1fr)!important;}
+.v6-final{min-height:700px!important;background-position:53% center!important;padding-left:var(--g)!important;padding-right:var(--g)!important;}
+.v6-final .final-copy{margin-top:210px!important;}
+}

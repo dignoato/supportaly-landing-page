@@ -1,0 +1,89 @@
+/* SUPPORTALY — product card refinement V12 — 28 Oct 2026 */
+.v6-kit .kit-card p,
+.v6-kit .kit-card:nth-child(2) p,
+.v6-kit .kit-card:nth-child(6) p{
+  font-family:var(--supportaly-body-font,Arial,Helvetica,sans-serif)!important;
+  font-style:normal!important;
+  letter-spacing:-.006em!important;
+  line-height:1.48!important;
+}
+.v6-kit .kit-card .shop-artwork,
+.v6-kit .kit-card:nth-child(2) .shop-artwork,
+.v6-kit .kit-card:nth-child(6) .shop-artwork{
+  margin:0!important;
+  background:#fff!important;
+  border-top:1px solid #e1e4de!important;
+  border-bottom:1px solid #e1e4de!important;
+}
+.v6-kit .shop-image-page{
+  inset:0!important;
+}
+.v6-kit .kit-card .shop-artwork img,
+.v6-kit .kit-card:nth-child(2) .shop-artwork img,
+.v6-kit .kit-card:nth-child(6) .shop-artwork img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  box-shadow:none!important;
+  background:#fff!important;
+}
+.v6-kit .kit-card .shop-buy{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-width:66px!important;
+  min-height:46px!important;
+  height:46px!important;
+  padding:0 17px!important;
+  margin:0!important;
+  border:1px solid #bfc5bc!important;
+  border-radius:999px!important;
+  background:#eef0ec!important;
+  color:#20251f!important;
+  font-family:var(--supportaly-heading-font,Arial,sans-serif)!important;
+  font-size:11px!important;
+  font-weight:630!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
+  cursor:pointer!important;
+  text-decoration:none!important;
+}
+.v6-kit .kit-card .shop-buy:hover,
+.v6-kit .kit-card .shop-buy:focus-visible{
+  background:#69745f!important;
+  border-color:#69745f!important;
+  color:#fff!important;
+}
+@media(max-width:767px){
+  .v6-kit .kit-card .shop-artwork,
+  .v6-kit .kit-card:nth-child(2) .shop-artwork,
+  .v6-kit .kit-card:nth-child(6) .shop-artwork{
+    margin:0!important;
+  }
+  .v6-kit .kit-card .shop-buy{
+    min-width:62px!important;
+    padding-inline:15px!important;
+  }
+}
+/* Product media crop + compact preview dots — 2026-10-28 */
+.v6-kit .kit-card .shop-artwork img,.v6-kit .kit-card:nth-child(2) .shop-artwork img,.v6-kit .kit-card:nth-child(6) .shop-artwork img{object-fit:cover!important;object-position:center!important;}
+.v6-kit .shop-dots{gap:2px!important;margin-left:auto!important;justify-content:flex-end!important;}
+.v6-kit .shop-dot{width:18px!important;height:24px!important;}
+
+/* Clarity Kit border removal — 2026-10-29 */
+.v6-kit .kit-card,.v6-kit .kit-card:nth-child(2),.v6-kit .kit-card:nth-child(6){border:0!important;}
+.v6-kit .kit-card:hover{border-color:transparent!important;}
+.v6-kit .kit-card .shop-artwork,.v6-kit .kit-card:nth-child(2) .shop-artwork,.v6-kit .kit-card:nth-child(6) .shop-artwork{border:0!important;}
+
+/* Clarity Kit filters + bundle card — 2026-10-29 */
+.v6-kit .kit-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;}
+.v6-kit .kit-filter{min-height:38px;padding:0 16px;border:1px solid #c6cbc3;border-radius:999px;background:transparent;color:#2d342d;font-family:var(--supportaly-heading-font,Arial,sans-serif);font-size:11px;font-weight:630;letter-spacing:.03em;cursor:pointer;}
+.v6-kit .kit-filter:hover,.v6-kit .kit-filter:focus-visible{border-color:#65715f;}
+.v6-kit .kit-filter.is-active{background:#65715f;border-color:#65715f;color:#fff;}
+.v6-kit .kit-card[hidden]{display:none!important;}
+.v6-kit .bundle-artwork{background:#f0f1ed!important;}
+.v6-kit .bundle-cover-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:6px;width:100%;height:100%;padding:18px;}
+.v6-kit .bundle-cover-grid img{position:static!important;width:100%!important;height:100%!important;object-fit:cover!important;box-shadow:none!important;}
+.v6-kit .bundle-coming-soon{font-size:clamp(18px,1.8vw,25px)!important;letter-spacing:-.025em!important;}
+@media(max-width:767px){.v6-kit .kit-filters{gap:6px;margin-bottom:20px}.v6-kit .kit-filter{min-height:36px;padding:0 13px;font-size:10px}.v6-kit .bundle-cover-grid{padding:12px;gap:4px}}

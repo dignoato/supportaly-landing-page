@@ -1,0 +1,45 @@
+/* Supportaly — shared textual link treatment, 25 October 2026.
+   Underline ordinary text links; no generated arrows anywhere.
+   Keep header and expanded main-menu navigation without underlines.
+   Preserve branding, icon links, and pill/button CTA treatments. */
+
+/* Inline editorial links are visibly underlined, without icons or arrows. */
+main a[href]:not(.button):not(.brand):not(.account-link):not(.skip-link) {
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .16em;
+  text-decoration-skip-ink: auto;
+}
+
+/* Existing in-sentence links belong to light sections; use black text. */
+main .v6-simple .section-heading p a[href],
+main .v6-comparison .comparison-intro p a[href] {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
+
+/* The professional editorial link acts as a text link, not an arrow CTA. */
+main .pro-editorial .pro-editorial-link {
+  color: var(--ink);
+  border-bottom: 0;
+  text-decoration-line: underline !important;
+}
+main .pro-editorial .pro-editorial-link > span[aria-hidden="true"] {
+  display: none;
+}
+
+/* The site footer contains text links, distinct from the main menu. */
+.site-footer a[href]:not(.footer-wordmark) {
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .16em;
+  text-decoration-skip-ink: auto;
+}
+
+/* Header navigation and the fullscreen main menu remain un-underlined. */
+.site-header a[href]:not(.brand),
+.editorial-menu a[href]:not(.brand) {
+  text-decoration: none !important;
+}
+
+/* Keep existing CTA buttons, brand marks, and icon-only links unchanged. */

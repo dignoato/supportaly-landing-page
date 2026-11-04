@@ -1,0 +1,79 @@
+/* Supportaly annotation review — 2026-10-23.
+   Targeted homepage-only corrections; preserves the approved editorial subtitle,
+   existing content, photographs, navigation, account and Clarity Check. */
+
+/* The large hero heading is the typographic reference. Keep it legible on tablets. */
+.v6-hero .hero-copy .hero-h1 {
+  max-width: 100%;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .v6-hero .hero-copy .hero-h1 {
+    font-size: clamp(63px, 7.65vw, 91px);
+    line-height: .90;
+    letter-spacing: -.078em;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Position product meta with the CTA, not on the remote right edge. */
+.v6-hero .hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.v6-hero .hero-actions > span {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  white-space: normal;
+  text-align: left;
+}
+@media (max-width: 600px) {
+  .v6-hero .hero-actions { gap: 10px; }
+}
+
+/* Philosophy quotation: match hero family and exact variable heading weight.
+   Optical size remains independent as noted in the PDF. */
+main .manifesto blockquote {
+  font-family: var(--supportaly-heading-font) !important;
+  font-weight: var(--supportaly-h-weight) !important;
+  font-style: normal;
+  letter-spacing: -.083em;
+  line-height: .91;
+  font-size: clamp(50px, 6.3vw, 100px);
+}
+
+/* Problem-section closing explanation: body sans, not editorial-subtitle serif. */
+main .v6-problem .section-outro p {
+  font-family: var(--supportaly-body-font) !important;
+  font-style: normal !important;
+  font-size: clamp(17px, 1.75vw, 23px);
+  line-height: 1.42 !important;
+  letter-spacing: -.012em !important;
+}
+main .v6-problem .section-outro p + p {
+  margin-top: 12px;
+}
+
+/* Method: remove oversized spacing between the two consecutive paragraphs. */
+main .v6-simple .section-heading p:not(.eyebrow) {
+  margin-bottom: 0;
+}
+main .v6-simple .section-heading p:first-of-type {
+  margin-top: clamp(20px, 2.5vw, 30px);
+  margin-bottom: 0;
+}
+main .v6-simple .section-heading p + p {
+  margin-top: 14px;
+  margin-bottom: clamp(32px, 4vw, 54px);
+}
+@media (max-width: 600px) {
+  main .v6-simple .section-heading p + p {
+    margin-top: 11px;
+    margin-bottom: 32px;
+  }
+}

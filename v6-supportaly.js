@@ -1,0 +1,14 @@
+/* V6 preview — existing site behavior, no live store modification */
+const menuButton=document.querySelector('.menu-toggle');
+const overlay=document.querySelector('#menuOverlay');
+const closeMenu=()=>{if(!overlay)return;overlay.hidden=true;menuButton?.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open');menuButton?.focus({preventScroll:true})};
+if(menuButton&&overlay){menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')==='true';if(open){closeMenu()}else{overlay.hidden=false;menuButton.setAttribute('aria-expanded','true');document.body.classList.add('menu-open');overlay.querySelector('nav a')?.focus({preventScroll:true})}});overlay.querySelector('.menu-close')?.addEventListener('click',closeMenu);overlay.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{overlay.hidden=true;menuButton.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open')}));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!overlay.hidden)closeMenu()})}
+/* Interactive Clarity Check moved to supportaly-onboarding.js */
+const faqs=[...document.querySelectorAll('#faq details')];faqs.forEach(item=>item.addEventListener('toggle',()=>{if(!item.open||window.innerWidth>720)return;faqs.forEach(other=>{if(other!==item)other.open=false})}));
+const purchaseButton=document.querySelector('#purchaseButton');const checkoutDialog=document.querySelector('#checkoutDialog');
+purchaseButton?.addEventListener('click',()=>checkoutDialog?.showModal?.());
+if(checkoutDialog){checkoutDialog.querySelectorAll('.dialog-close,.dialog-close-secondary').forEach(b=>b.addEventListener('click',()=>checkoutDialog.close()));checkoutDialog.addEventListener('click',e=>{const r=checkoutDialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)checkoutDialog.close()})}
+const zoomModal=document.querySelector('#imageLightbox');if(zoomModal){document.querySelectorAll('.preview-zoom').forEach(b=>b.addEventListener('click',()=>{const src=b.querySelector('img');if(!src)return;zoomModal.querySelector('img').src=src.getAttribute('src');zoomModal.querySelector('img').alt=src.alt;zoomModal.querySelector('.zoom-caption').textContent=b.closest('figure')?.querySelector('figcaption')?.textContent||'';zoomModal.showModal()}));zoomModal.querySelector('.zoom-close').addEventListener('click',()=>zoomModal.close());zoomModal.addEventListener('click',e=>{const r=zoomModal.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)zoomModal.close()})}
+
+// Live-source preservation: load current Wix photos; archived local variants are preview-only offline fallbacks.
+document.querySelectorAll('img[data-preview-fallback]').forEach(img=>img.addEventListener('error',()=>{if(!img.dataset.fallbackApplied){img.dataset.fallbackApplied='1';img.src=img.dataset.previewFallback}}));

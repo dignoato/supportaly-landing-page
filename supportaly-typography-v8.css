@@ -1,0 +1,66 @@
+/* Supportaly V8: unified site typography, 2026-10-23.
+   Headlines use weight 635 where supported; serif only for editorial subheads.
+   Copy, logo, images and commerce/authentication remain unchanged. */
+:root{
+  --supportaly-heading-font:"Segoe UI Variable Display","Segoe UI Variable Text",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,Helvetica,sans-serif;
+  --supportaly-body-font:Arial,Helvetica,"Liberation Sans",sans-serif;
+  --supportaly-serif:"Iowan Old Style",Baskerville,"Palatino Linotype","Book Antiqua",Georgia,"Times New Roman",serif;
+  --supportaly-h-weight:635;
+}
+main h1,main h2 {
+ font-family:var(--supportaly-heading-font)!important;
+ font-weight:var(--supportaly-h-weight)!important;
+}
+body.account-body .auth-intro h1,body.account-body .account-title h1,body.account-body .auth-panel h2,body.account-body .account-panel-heading h2 {
+ font-family:var(--supportaly-heading-font)!important;
+ font-weight:635!important;
+}
+/* All substantial editorial lead/subtitle text, in English and Italian. */
+main .hero-copy .lede,
+main .hero-copy .lede p,
+main .manifesto .manifesto-story p,
+main .v6-problem .section-heading p:not(.eyebrow),
+main .v6-problem .section-outro p,
+main .v6-pattern .pattern-copy .lede-small,
+main .v6-pattern .interpretation-note,
+main .v6-clarity .clarity-tool>.section-heading p:not(.eyebrow),
+main .v6-simple .section-heading p:not(.eyebrow),
+main .v6-kit .section-heading p:not(.eyebrow),
+main .v6-preview .section-heading p:not(.eyebrow),
+main .v6-how .section-heading p:not(.eyebrow),
+main .v6-qualification .section-heading p:not(.eyebrow),
+main .v6-comparison .comparison-intro p,
+main .v6-offer .supportaly-note>p:not(.eyebrow),
+main .v6-final .final-copy p:not(.eyebrow),
+main .pro-editorial .pro-editorial-opening-aside p,
+main .pro-editorial .pro-context .lede-small p,
+main .pro-editorial .pro-lead {
+ font-family:var(--supportaly-serif)!important;
+ font-style:normal;letter-spacing:-.012em;
+}
+main .hero-copy .lede,main .manifesto .manifesto-story p{line-height:1.31;}
+main .v6-problem .section-heading p:not(.eyebrow),
+main .v6-clarity .clarity-tool>.section-heading p:not(.eyebrow),
+main .v6-simple .section-heading p:not(.eyebrow),
+main .v6-comparison .comparison-intro p{line-height:1.38;}
+main .pro-editorial .pro-editorial-opening-aside p{line-height:1.47;}
+main .pro-editorial .pro-context .lede-small p{line-height:1.49;letter-spacing:-.008em;}
+main .pro-editorial .pro-lead{line-height:1.19;letter-spacing:-.025em;}
+/* Professionals: labels, long-form body and workflow use home-page sans. */
+main .pro-editorial{font-family:var(--grotesk,var(--supportaly-body-font));}
+main .pro-editorial .pro-editorial-kicker,
+main .pro-editorial .pro-editorial-section-label,
+main .pro-editorial .pro-editorial-link,
+main .pro-editorial .professional-benefits p,
+main .pro-editorial .pro-steps p,
+main .pro-editorial .boundary-note .boundary-copy p {
+ font-family:var(--grotesk,var(--supportaly-body-font));
+}
+main .pro-editorial .pro-editorial-opening h1,
+main .pro-editorial .pro-process h2{
+ font-family:var(--supportaly-heading-font)!important;font-weight:635!important;
+}
+@media(max-width:767px){
+ main .hero-copy .lede,main .hero-copy .lede p,main .manifesto .manifesto-story p{line-height:1.37;}
+ main .pro-editorial .pro-context .lede-small p{line-height:1.48;}
+}

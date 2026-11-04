@@ -1,0 +1,176 @@
+/* Supportaly — professional page typography alignment (2026-10-25)
+   Applies the home page's font families, heading weights and editorial scale.
+   Scoped to the professional page; no layout, imagery or interaction rules. */
+
+main .pro-editorial {
+  color: var(--ink);
+  font-family: var(--grotesk, var(--supportaly-body-font));
+}
+
+/* Editorial labels: same compact sans hierarchy as the home page. */
+main .pro-editorial .pro-editorial-kicker,
+main .pro-editorial .pro-editorial-section-label {
+  font-family: var(--grotesk, var(--supportaly-body-font));
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  letter-spacing: .12em;
+}
+main .pro-editorial .pro-editorial-link {
+  font-family: var(--grotesk, var(--supportaly-body-font));
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+/* Display type: home page headline family and weight, scaled to this grid. */
+main .pro-editorial .pro-editorial-opening h1 {
+  font-family: var(--supportaly-heading-font) !important;
+  font-size: clamp(56px, 6.4vw, 104px);
+  font-weight: 635 !important;
+  line-height: .83;
+  color: var(--ink);
+  letter-spacing: -.074em;
+}
+main .pro-editorial .pro-process h2 {
+  font-family: var(--supportaly-heading-font) !important;
+  font-size: clamp(50px, 6.4vw, 100px);
+  font-weight: 635 !important;
+  line-height: .91;
+  color: var(--ink);
+  letter-spacing: -.074em;
+}
+
+/* Editorial introduction: serif treatment used on the home page. */
+main .pro-editorial .pro-editorial-opening-aside p {
+  font-family: var(--supportaly-serif) !important;
+  font-size: clamp(18px, 1.7vw, 24px);
+  font-weight: 400;
+  line-height: 1.31;
+  color: var(--ink);
+  letter-spacing: -.012em;
+}
+main .pro-editorial .pro-context .lede-small p {
+  font-family: var(--supportaly-serif) !important;
+  font-size: clamp(18px, 2.1vw, 29px);
+  font-weight: 400;
+  line-height: 1.38;
+  color: var(--ink);
+  letter-spacing: -.012em;
+}
+
+/* Editorial statement: display sans, as on the home page. */
+main .pro-editorial .pro-lead {
+  font-family: var(--supportaly-heading-font) !important;
+  font-size: clamp(31px, 4.3vw, 62px);
+  font-weight: 635 !important;
+  line-height: .91;
+  color: var(--ink);
+  letter-spacing: -.065em;
+}
+main .pro-editorial .pro-lead strong {
+  font-weight: 635 !important;
+}
+
+/* Card and workflow headings: match the denser, stronger home hierarchy. */
+main .pro-editorial .professional-benefits h3,
+main .pro-editorial .pro-steps h3 {
+  font-family: var(--grotesk, var(--supportaly-body-font));
+  font-size: clamp(23px, 3vw, 41px);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -.055em;
+}
+main .pro-editorial .boundary-note h3 {
+  font-family: var(--supportaly-heading-font);
+  font-size: clamp(35px, 4.5vw, 65px);
+  font-weight: 635;
+  line-height: .92;
+  color: var(--ink);
+  letter-spacing: -.065em;
+}
+
+/* The same more compact reading rhythm used for home-page product copy. */
+main .pro-editorial .professional-benefits p,
+main .pro-editorial .pro-steps p,
+main .pro-editorial .boundary-note .boundary-copy p {
+  font-family: var(--grotesk, var(--supportaly-body-font));
+  font-size: clamp(16px, 1.45vw, 18px);
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: -.015em;
+}
+
+@media (max-width: 767px) {
+  main .pro-editorial .pro-editorial-kicker {
+    font-size: 10px;
+  }
+  main .pro-editorial .pro-editorial-opening h1 {
+    font-size: clamp(51px, 12.7vw, 77px);
+    line-height: .86;
+  }
+  main .pro-editorial .pro-editorial-opening-aside p {
+    font-size: 18px;
+    line-height: 1.37;
+  }
+  main .pro-editorial .pro-context .lede-small p {
+    font-size: 19px;
+    line-height: 1.38;
+  }
+  main .pro-editorial .pro-lead {
+    font-size: clamp(31px, 7.6vw, 47px);
+    line-height: .91;
+  }
+  main .pro-editorial .professional-benefits h3,
+  main .pro-editorial .pro-steps h3 {
+    font-size: clamp(25px, 7.5vw, 35px);
+    line-height: 1.05;
+  }
+  main .pro-editorial .pro-process h2 {
+    font-size: clamp(48px, 11.3vw, 72px);
+    line-height: .95;
+  }
+  main .pro-editorial .boundary-note h3 {
+    font-size: clamp(37px, 9vw, 55px);
+  }
+  main .pro-editorial .professional-benefits p,
+  main .pro-editorial .pro-steps p,
+  main .pro-editorial .boundary-note .boundary-copy p {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+}
+
+/* Home-equivalent typography: colors and line spacing only.
+   Card titles → homepage kit cards; process titles/body → homepage four-step workflow;
+   body descriptions → homepage kit cards; qualification text → homepage qualification. */
+main .pro-editorial .professional-benefits h3 {
+  color: var(--ink);
+  line-height: 1.02;
+}
+main .pro-editorial .pro-steps h3 {
+  color: var(--ink);
+  line-height: .94;
+}
+main .pro-editorial .professional-benefits p {
+  color: var(--gray);
+  line-height: 1.42;
+}
+main .pro-editorial .pro-steps p {
+  color: var(--gray);
+  line-height: 1.2;
+}
+main .pro-editorial .boundary-note .boundary-copy p {
+  color: var(--gray);
+  line-height: 1.35;
+}
+main .pro-editorial .professional-benefits article::before {
+  color: #5d6556;
+  line-height: 1.25;
+}
+main .pro-editorial .pro-steps li::before {
+  color: var(--ink);
+  line-height: 1.25;
+}
