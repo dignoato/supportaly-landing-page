@@ -8,12 +8,20 @@ import subprocess
 import json
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlsplit
 from playwright.sync_api import sync_playwright
 
 VIEWPORTS = (("desktop-1440", 1440, 900), ("mobile-390", 390, 844))
 
 
 def prepare_page(page):
+    def image_state():
+        return page.evaluate("""() => [...document.images]
+            .filter(i => i.getAttribute('src') || i.getAttribute('srcset'))
+            .map(i => ({src:i.getAttribute('src'), currentSrc:i.currentSrc,
+                       loading:i.loading, complete:i.complete, width:i.naturalWidth,
+                       visible:!!(i.getBoundingClientRect().width && i.getBoundingClientRect().height)}))""")
+    stages = {"beforeScroll": image_state()}
     print("waiting for fonts", flush=True)
     page.evaluate("document.fonts.ready.then(() => true)")
     # Bound scrolling so infinite/continuously growing pages cannot hang capture.
@@ -25,6 +33,7 @@ def prepare_page(page):
         page.wait_for_timeout(180)
         if at_bottom:
             break
+    stages["afterScrollBeforeEager"] = image_state()
     print("scroll complete; decoding images", flush=True)
     page.evaluate("""async () => {
         await document.fonts.ready;
@@ -42,6 +51,8 @@ def prepare_page(page):
     print("images ready", flush=True)
     page.evaluate("window.scrollTo({top:0, behavior:'instant'})")
     page.wait_for_timeout(800)
+    stages["afterEagerDecode"] = image_state()
+    return stages
 
 
 def inspect_page(page):
@@ -94,11 +105,11 @@ def main():
                 page.on("response", lambda r: report["httpFailures"].append(
                     {"url":r.url, "status":r.status}) if r.status >= 400 else None)
                 page.on("request", lambda r: report["externalRequests"].append(
-                    {"url":r.url,"type":r.resource_type}) if not r.url.startswith(args.base_url.rstrip('/')) else None)
+                    {"url":r.url,"type":r.resource_type}) if urlsplit(r.url).netloc != urlsplit(args.base_url).netloc else None)
                 try:
                     response = page.goto(args.base_url, wait_until="domcontentloaded", timeout=60000)
                     report["status"] = response.status if response else None
-                    prepare_page(page)
+                    report["loadingStages"] = prepare_page(page)
                     report.update(inspect_page(page))
                     report["brokenImages"] = [i for i in report["images"] if (i["src"] or i["currentSrc"]) and (not i["complete"] or not i["width"])]
                     page.screenshot(path=str(output / f"home-{name}.png"), full_page=True, animations="disabled")
