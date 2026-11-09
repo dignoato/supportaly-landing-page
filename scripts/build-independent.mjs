@@ -12,6 +12,7 @@ await rm(outputRoot, { recursive: true, force: true });
 await mkdir(outputRoot, { recursive: true });
 
 const mediaState = loadMediaState();
+if (mediaState.unresolved.length) throw new Error('All Wix media must be preserved before building');
 const rootEntries = await readdir(projectRoot, { withFileTypes: true });
 
 for (const entry of rootEntries) {
@@ -26,6 +27,8 @@ for (const entry of rootEntries) {
 }
 
 await cp(join(projectRoot, 'assets'), join(outputRoot, 'assets'), { recursive: true });
+// Provenance belongs in the repository; deploy image bytes only.
+await rm(join(outputRoot, 'assets', 'wix-preserved', 'index.json'), { force: true });
 await cp(join(projectRoot, 'independent'), join(outputRoot, 'independent'), { recursive: true });
 
 const statusDirectory = join(outputRoot, '__migration');

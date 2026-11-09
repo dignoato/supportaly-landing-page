@@ -2,26 +2,203 @@
   "version": 1,
   "source": "docs/EXTERNAL_ASSETS.csv",
   "assets": [
-    {"url":"https://static.wixstatic.com/media/53e940_0b6db3d9c3d344a5b19c450bb484b4ab~mv2.png","referencedBy":["index.html","product-01-start-here.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_0f0aee3f62ea4e02b43e32159c7ed8b0~mv2.png","referencedBy":["index.html"],"localEquivalent":"assets/messages.webp"},
-    {"url":"https://static.wixstatic.com/media/53e940_1838e098ceb74253a5e7b016c8ba3a6c~mv2.jpg","referencedBy":["index.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_2ad77f6e8ea2470aa09eef4024b643e2~mv2.png","referencedBy":["index.html","product-06-filled-example.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_4c3f1b5ec3ec4fecbe3525baf1ab767f~mv2.jpg","referencedBy":["index.html","product-02-client-workbook.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_4c96ea50bd1f439287deae7db053ef23~mv2.png","referencedBy":["index.html","product-01-start-here.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_589bd7d64cab43febc108bff05eb877f~mv2.png","referencedBy":["index.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_66dbd92942cc4ee492e5be9743b3eb3f~mv2.png","referencedBy":["index.html","supportaly-guided-check.js"],"localEquivalent":"assets/decision-page.webp"},
-    {"url":"https://static.wixstatic.com/media/53e940_73f7d4a7c63b4e78934252157f4beeb1~mv2.png","referencedBy":["index.html"],"localEquivalent":"assets/decision.webp"},
-    {"url":"https://static.wixstatic.com/media/53e940_7bc981bf2e674f7284ec04d069f1eb70~mv2.png","referencedBy":["index.html","product-06-filled-example.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_7d26e70c4db64b00b7e3f0e2ba845251~mv2.png","referencedBy":["index.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_818fc38c919340e788f83e1c6ed92e8c~mv2.png","referencedBy":["index.html","product-02-client-workbook.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_87fb1f5642d44089ac41a4a3c9a3f791~mv2.png","referencedBy":["index.html","product-03-architect-handover.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_9bcce621740b498a920bf24288a84b1f~mv2.png","referencedBy":["index.html","product-06-filled-example.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_a30e8505264d46c1b8fad71de26b701a~mv2.png","referencedBy":["index.html","product-03-architect-handover.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_b17503ba54ed4e10b8b86d178065aa73~mv2.png","referencedBy":["index.html","product-clarity-kit-bundle.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_c5e0bf46a51b4e7d970276d3f28f6122~mv2.png","referencedBy":["index.html","product-clarity-kit-bundle.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_e1e58ff5c94d49d3a328e1bc1e696be1~mv2.png","referencedBy":["index.html","product-01-start-here.html","product-02-client-workbook.html","product-03-architect-handover.html","product-04-decision-card.html","product-05-message-starters.html","product-06-filled-example.html","product-clarity-kit-bundle.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_eae9808cda1a4fa193eb2f2ec1141714~mv2.png","referencedBy":["index.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_ee843c7160f74b61bfb360f540129a1d~mv2.png","referencedBy":["index.html","product-01-start-here.html","product-02-client-workbook.html","product-03-architect-handover.html","product-04-decision-card.html","product-05-message-starters.html","product-06-filled-example.html","product-clarity-kit-bundle.html"]},
-    {"url":"https://static.wixstatic.com/media/53e940_fb25ef1d76ec498c96928fe032e54090~mv2.png","referencedBy":["index.html","product-01-start-here.html","product-02-client-workbook.html","product-03-architect-handover.html","product-04-decision-card.html","product-05-message-starters.html","product-06-filled-example.html","product-clarity-kit-bundle.html"]}
+    {
+      "url": "https://static.wixstatic.com/media/53e940_0b6db3d9c3d344a5b19c450bb484b4ab~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-01-start-here.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_0b6db3d9c3d344a5b19c450bb484b4ab~mv2.png",
+      "sha256": "3921cf939190c2084ac7bca08c5ffde723d6cc8c225692cc201bfb54700b54e5"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_0f0aee3f62ea4e02b43e32159c7ed8b0~mv2.png",
+      "referencedBy": [
+        "index.html"
+      ],
+      "localEquivalent": "assets/messages.webp"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_1838e098ceb74253a5e7b016c8ba3a6c~mv2.jpg",
+      "referencedBy": [
+        "index.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_1838e098ceb74253a5e7b016c8ba3a6c~mv2.jpg",
+      "sha256": "402c27e859e502e00908d6807847aa927c39054c2948f4f7408e1fe61e18fc5b"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_2ad77f6e8ea2470aa09eef4024b643e2~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-06-filled-example.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_2ad77f6e8ea2470aa09eef4024b643e2~mv2.png",
+      "sha256": "12848526321fe1f7eef678d52047a1a09e01ffd46f6d473af34a09aa3d37dd03"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_4c3f1b5ec3ec4fecbe3525baf1ab767f~mv2.jpg",
+      "referencedBy": [
+        "index.html",
+        "product-02-client-workbook.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_4c3f1b5ec3ec4fecbe3525baf1ab767f~mv2.jpg",
+      "sha256": "c08848b3e880c7cc10dc9405bc69e79a4aea35cb571a616cc2c3ef3ce081c895"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_4c96ea50bd1f439287deae7db053ef23~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-01-start-here.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_4c96ea50bd1f439287deae7db053ef23~mv2.png",
+      "sha256": "449dc4853d237700cfb2015f1fe70a5fde77f10c590e20ff248938b8d7a28748"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_589bd7d64cab43febc108bff05eb877f~mv2.png",
+      "referencedBy": [
+        "index.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_589bd7d64cab43febc108bff05eb877f~mv2.png",
+      "sha256": "a6c7d0e70c8c63862035d51c9d8e50b21d3583465c582e9ce3923a9bf4abfa3c"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_66dbd92942cc4ee492e5be9743b3eb3f~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "supportaly-guided-check.js"
+      ],
+      "localEquivalent": "assets/decision-page.webp"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_73f7d4a7c63b4e78934252157f4beeb1~mv2.png",
+      "referencedBy": [
+        "index.html"
+      ],
+      "localEquivalent": "assets/decision.webp"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_7bc981bf2e674f7284ec04d069f1eb70~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-06-filled-example.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_7bc981bf2e674f7284ec04d069f1eb70~mv2.png",
+      "sha256": "1fec15fdb8f68ad069ca5f350199a4301793a674a61ae2a2a4618cc09e317fc8"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_7d26e70c4db64b00b7e3f0e2ba845251~mv2.png",
+      "referencedBy": [
+        "index.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_7d26e70c4db64b00b7e3f0e2ba845251~mv2.png",
+      "sha256": "bc507ba0bf3bf0a3783b8b9422d8e75182fbc48cfb59ee7fd7a84b2b16fecbc6"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_818fc38c919340e788f83e1c6ed92e8c~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-02-client-workbook.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_818fc38c919340e788f83e1c6ed92e8c~mv2.png",
+      "sha256": "0ca1c480fcf4442ef54f9432fb4d4c334737391f5b847d3f24f8017196c3971d"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_87fb1f5642d44089ac41a4a3c9a3f791~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-03-architect-handover.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_87fb1f5642d44089ac41a4a3c9a3f791~mv2.png",
+      "sha256": "89aaca86b3c5ee0db37f34f70fe6a3e1292b72cb7c2a2ebd7aaca4bca2a707f1"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_9bcce621740b498a920bf24288a84b1f~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-06-filled-example.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_9bcce621740b498a920bf24288a84b1f~mv2.png",
+      "sha256": "b34fd94935cd861b0f17ea49e8e23e144eb9b3ab150d40583b44ab767348d64e"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_a30e8505264d46c1b8fad71de26b701a~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-03-architect-handover.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_a30e8505264d46c1b8fad71de26b701a~mv2.png",
+      "sha256": "5a0a42f66b4f11b2c1cf648a235f3e0275fb282aecc5e4737de3704b621c8e1e"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_b17503ba54ed4e10b8b86d178065aa73~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-clarity-kit-bundle.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_b17503ba54ed4e10b8b86d178065aa73~mv2.png",
+      "sha256": "51448539b84c8f9e90f9beea63bc2ee34afd5e7141a5fbf6be34eb079fd78740"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_c5e0bf46a51b4e7d970276d3f28f6122~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-clarity-kit-bundle.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_c5e0bf46a51b4e7d970276d3f28f6122~mv2.png",
+      "sha256": "9045131cc5155c55898eb1105b9ec0e233011da6567da39391c1e53fa25e7344"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_e1e58ff5c94d49d3a328e1bc1e696be1~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-01-start-here.html",
+        "product-02-client-workbook.html",
+        "product-03-architect-handover.html",
+        "product-04-decision-card.html",
+        "product-05-message-starters.html",
+        "product-06-filled-example.html",
+        "product-clarity-kit-bundle.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_e1e58ff5c94d49d3a328e1bc1e696be1~mv2.png",
+      "sha256": "dc31c45ffbdee1e63121012ccfc00af5b06c69b006dc073e0c0768ef7989bc73"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_eae9808cda1a4fa193eb2f2ec1141714~mv2.png",
+      "referencedBy": [
+        "index.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_eae9808cda1a4fa193eb2f2ec1141714~mv2.png",
+      "sha256": "475c448c1998c65041a18cf2d4f4252ccf063058231bcc7b87761a680e13fd86"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_ee843c7160f74b61bfb360f540129a1d~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-01-start-here.html",
+        "product-02-client-workbook.html",
+        "product-03-architect-handover.html",
+        "product-04-decision-card.html",
+        "product-05-message-starters.html",
+        "product-06-filled-example.html",
+        "product-clarity-kit-bundle.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_ee843c7160f74b61bfb360f540129a1d~mv2.png",
+      "sha256": "50edcf4942bb814de8ebdbe1d90a1ab0023a19910c7a2c49b98787c546fab51a"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/53e940_fb25ef1d76ec498c96928fe032e54090~mv2.png",
+      "referencedBy": [
+        "index.html",
+        "product-01-start-here.html",
+        "product-02-client-workbook.html",
+        "product-03-architect-handover.html",
+        "product-04-decision-card.html",
+        "product-05-message-starters.html",
+        "product-06-filled-example.html",
+        "product-clarity-kit-bundle.html"
+      ],
+      "localEquivalent": "assets/wix-preserved/53e940_fb25ef1d76ec498c96928fe032e54090~mv2.png",
+      "sha256": "840fc5eb62f8cf97d20a81e36531c65c86271c3fce2a9b70b8314501fa6660e9"
+    }
   ]
 }

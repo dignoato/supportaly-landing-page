@@ -10,6 +10,14 @@ const loginSource = await readFile(join(projectRoot, 'login.html'), 'utf8');
 const accountSource = await readFile(join(projectRoot, 'account.html'), 'utf8');
 const mediaState = loadMediaState();
 
+assert.equal(mediaState.replacements.size, 21);
+assert.deepEqual(mediaState.unresolved, []);
+for (const asset of mediaState.manifest.assets) {
+  assert.match(mediaState.replacements.get(asset.url), /^\/assets\//);
+  const result = transformText('/media.css', `url("${asset.url}")`, mediaState);
+  assert.doesNotMatch(result, /static\.wixstatic\.com/);
+}
+
 const transformedHomepage = transformText('/index.html', homepageSource, mediaState);
 const transformedLogin = transformText('/login.html', loginSource, mediaState);
 const transformedAccount = transformText('/account.html', accountSource, mediaState);

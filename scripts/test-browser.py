@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
 import argparse
+import json
+from pathlib import Path
+from urllib.parse import urlsplit
 
 from playwright.sync_api import sync_playwright
 
@@ -23,7 +26,18 @@ with sync_playwright() as playwright:
         args=["--disable-dev-shm-usage"],
     )
     try:
-        page = browser.new_page(viewport={"width": 1440, "height": 1000})
+        # All pages and all interaction contexts share the same request audit.
+        context = browser.new_context(viewport={"width":1440,"height":900})
+        external_required_requests = []
+        failures = []
+        expected_origin = urlsplit(base_url).netloc
+        context.on("request", lambda r: external_required_requests.append(r.url)
+                   if urlsplit(r.url).scheme in ("http", "https")
+                   and urlsplit(r.url).netloc != expected_origin else None)
+        context.on("requestfailed", lambda r: failures.append({"url": r.url, "error": r.failure}))
+        context.on("response", lambda r: failures.append({"url": r.url, "status": r.status})
+                   if r.status >= 400 else None)
+        page = context.new_page()
         wix_runtime_requests = []
         page.on(
             "request",
@@ -56,7 +70,8 @@ with sync_playwright() as playwright:
         page.close()
 
         for width, height, label in ((1024, 900, "tablet-1024"), (768, 1024, "tablet-768"), (390, 844, "mobile")):
-            page = browser.new_page(viewport={"width": width, "height": height})
+            page = context.new_page()
+            page.set_viewport_size({"width":width,"height":height})
             page.goto(base_url, wait_until="domcontentloaded")
             page.wait_for_timeout(200)
             assert_no_horizontal_overflow(page, label)
@@ -65,7 +80,8 @@ with sync_playwright() as playwright:
             page.locator("#menuOverlay .menu-close").click()
             page.close()
 
-        page = browser.new_page(viewport={"width": 1024, "height": 900})
+        page = context.new_page()
+        page.set_viewport_size({"width":1024,"height":900})
         page.goto(f"{base_url}/product-04-decision-card.html", wait_until="domcontentloaded")
         main_image = page.locator("[data-main-image]")
         original_source = main_image.get_attribute("src")
@@ -73,12 +89,42 @@ with sync_playwright() as playwright:
         assert main_image.get_attribute("src") != original_source
         page.close()
 
-        page = browser.new_page(viewport={"width": 1024, "height": 900})
+        page = context.new_page()
+        page.set_viewport_size({"width":1024,"height":900})
         page.goto(f"{base_url}/login.html", wait_until="domcontentloaded")
         assert page.locator("#authForm input").first.is_disabled()
         assert "unavailable in Migration Step 1" in page.locator("#authMessage").inner_text()
         page.close()
 
+        route_results = []
+        routes = json.loads((Path(__file__).resolve().parents[1] / "_wix/pages.json").read_text())
+        for route in routes:
+            page = context.new_page()
+            response = page.goto(base_url + route["path"], wait_until="networkidle")
+            assert response.status == 200, route
+            # Force every lazy image to load, including below-fold media.
+            page.evaluate("""async () => {
+                await document.fonts.ready;
+                await Promise.all([...document.images].map(async i => {
+                    i.loading = 'eager';
+                    if (!i.complete) await Promise.race([
+                        new Promise(r => {i.addEventListener('load',r,{once:true});i.addEventListener('error',r,{once:true});}),
+                        new Promise(r => setTimeout(r,10000))]);
+                    if (i.naturalWidth) await i.decode().catch(() => {});
+                }));
+            }""")
+            broken = page.locator("img").evaluate_all("images => images.filter(i => (i.currentSrc || i.getAttribute('src') || i.getAttribute('srcset')) && (!i.complete || !i.naturalWidth)).map(i => i.currentSrc)")
+            assert not broken, f"{route}: broken images {broken}"
+            assert_no_horizontal_overflow(page, route["path"])
+            route_results.append({"path":route["path"],"status":response.status,"images":page.locator("img").count(),"brokenImages":broken})
+            page.close()
+        assert not external_required_requests, external_required_requests
+        assert not failures, failures
+        output = Path("artifacts/visual-comparison/local")
+        output.mkdir(parents=True, exist_ok=True)
+        (output / "routes.json").write_text(json.dumps({"routes":route_results,"externalRequests":external_required_requests,"failures":failures},indent=2)+"\n")
+        print(f"browser-routes={len(route_results)}; broken-images=0; external-requests=0")
+        context.close()
         print("guided-check=ok")
         print("dialogs-and-faq=ok")
         print("responsive-menu=ok")

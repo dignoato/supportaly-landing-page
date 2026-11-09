@@ -1,0 +1,25 @@
+{
+  "comparison": "local dist versus existing stable Vercel preview, not Wix production",
+  "results": [
+    {
+      "viewport": "desktop-1440",
+      "size": [
+        1440,
+        13517
+      ],
+      "identicalPixels": true,
+      "localSha256": "e841719ced7a04b5a5c749253c72e3f6a3ad6a199cfbb6f56d9ec2a056dcf555",
+      "previewSha256": "e841719ced7a04b5a5c749253c72e3f6a3ad6a199cfbb6f56d9ec2a056dcf555"
+    },
+    {
+      "viewport": "mobile-390",
+      "size": [
+        390,
+        14643
+      ],
+      "identicalPixels": true,
+      "localSha256": "147f07cf3b04a6afeedad540a99596dc00b3b3b8849871e154abee9c1add0726",
+      "previewSha256": "147f07cf3b04a6afeedad540a99596dc00b3b3b8849871e154abee9c1add0726"
+    }
+  ]
+}

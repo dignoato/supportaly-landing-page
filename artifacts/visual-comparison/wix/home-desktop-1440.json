@@ -1,0 +1,296 @@
+{
+  "url": "https://www.supportaly.com",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "capturedAt": "2026-11-09T10:40:08.187773+00:00",
+  "failedRequests": [
+    {
+      "url": "https://www.supportaly.com/style.less",
+      "error": "net::ERR_ABORTED",
+      "type": "stylesheet"
+    }
+  ],
+  "httpFailures": [
+    {
+      "url": "https://www.supportaly.com/style.less",
+      "status": 404
+    }
+  ],
+  "externalRequests": [
+    {
+      "url": "https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i",
+      "type": "stylesheet"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i",
+      "type": "stylesheet"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2",
+      "type": "font"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh7USSwiPGQ.woff2",
+      "type": "font"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjx4wXg.woff2",
+      "type": "font"
+    }
+  ],
+  "status": 200,
+  "title": "Intro - Supportaly",
+  "finalUrl": "https://www.supportaly.com/",
+  "height": 900,
+  "horizontalOverflow": 0,
+  "fonts": {
+    "status": "loaded",
+    "faces": [
+      {
+        "family": "MobiriseIcons",
+        "status": "unloaded",
+        "weight": "normal"
+      },
+      {
+        "family": "Moririse2",
+        "status": "unloaded",
+        "weight": "normal"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "400"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "400"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "400"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "400"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "700"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "700"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "700"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "700"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "900"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "900"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "900"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "900"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "400"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "400"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "400"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "700"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "700"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "700"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "loaded",
+        "weight": "700"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "900"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "900"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "900"
+      },
+      {
+        "family": "Playfair Display",
+        "status": "unloaded",
+        "weight": "900"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "100"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "100"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "300"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "300"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "400"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "400"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "700"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "700"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "900"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "900"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "100"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "100"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "300"
+      },
+      {
+        "family": "Lato",
+        "status": "loaded",
+        "weight": "300"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "400"
+      },
+      {
+        "family": "Lato",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "700"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "700"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "900"
+      },
+      {
+        "family": "Lato",
+        "status": "unloaded",
+        "weight": "900"
+      }
+    ]
+  },
+  "images": [
+    {
+      "src": "assets/images/logo-200x70.png",
+      "currentSrc": "https://www.supportaly.com/assets/images/logo-200x70.png",
+      "alt": "Mobirise",
+      "complete": true,
+      "width": 200,
+      "height": 70,
+      "visible": true
+    }
+  ],
+  "sections": [],
+  "brokenImages": []
+}

@@ -35,19 +35,26 @@ async function collect(directory) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
     const absolute = join(directory, entry.name);
     if (entry.isDirectory()) await collect(absolute);
-    else if (['.html', '.js', '.json'].includes(extname(entry.name))) textFiles.push(absolute);
+    else if (['.html', '.js', '.json', '.css', '.svg'].includes(extname(entry.name))) textFiles.push(absolute);
   }
 }
 await collect(outputRoot);
+// The archive index retains provenance URLs in source only, never in dist.
 
 for (const file of textFiles) {
   const text = await readFile(file, 'utf8');
   assert.doesNotMatch(text, /manage\.wix\.com\/_api\/headless-business-setup/i, `${file} loads Wix bootstrap`);
   assert.doesNotMatch(text, /www\.wixapis\.com/i, `${file} loads Wix APIs`);
+  assert.doesNotMatch(text, /static\.(?:wixstatic|parastorage)\.com/i, `${file} contains Wix media`);
+  assert.doesNotMatch(text, /(?:src|srcset|poster)=["']https?:\/\//i, `${file} loads external media/scripts`);
+  assert.doesNotMatch(text, /(?:url\(\s*["']?|@import\s+["'])https?:\/\//i, `${file} loads external CSS media/fonts`);
+  assert.doesNotMatch(text, /(?:fonts\.googleapis\.com|fonts\.gstatic\.com)/i, `${file} loads external fonts`);
 }
 
 const status = JSON.parse(await readFile(join(outputRoot, '__migration', 'status.json'), 'utf8'));
 assert.equal(status.wixRuntimeLoaded, false);
+assert.equal(status.media.local, 21);
+assert.deepEqual(status.media.unresolved, []);
 assert.deepEqual(status.excludedRuntimeFiles, [...forbiddenFiles].sort());
 
 console.log(`routes=${routes.length}`);

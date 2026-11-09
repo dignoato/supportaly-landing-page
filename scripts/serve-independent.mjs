@@ -44,6 +44,11 @@ export function loadMediaState() {
 
   for (const asset of preserved.assets || []) {
     if (asset.url && asset.path && existsSync(join(projectRoot, asset.path))) {
+      const bytes = readFileSync(join(projectRoot, asset.path));
+      const hash = createHash('sha256').update(bytes).digest('hex');
+      if (hash !== asset.sha256 || bytes.length !== asset.bytes) {
+        throw new Error(`Preserved media integrity mismatch: ${asset.path}`);
+      }
       replacements.set(asset.url, `/${asset.path}`);
     }
   }
@@ -139,7 +144,7 @@ export function createIndependentServer() {
 
     const extension = extname(target.absolute).toLowerCase();
     const contentType = contentTypes.get(extension) || 'application/octet-stream';
-    const shouldTransform = extension === '.html' || extension === '.js';
+    const shouldTransform = ['.html', '.js', '.css'].includes(extension);
 
     response.setHeader('Content-Type', contentType);
     response.setHeader('Cache-Control', 'no-store');

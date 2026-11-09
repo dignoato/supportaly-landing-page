@@ -23,9 +23,14 @@ function destinationFor(url) {
   return `assets/wix-preserved/${safeName}`;
 }
 
-async function sha256(path) {
-  const data = await readFile(path);
-  return createHash('sha256').update(data).digest('hex');
+function validateImage(bytes, extension) {
+  const png = bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+  const jpeg = bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff;
+  const webp = bytes.toString('ascii', 0, 4) === 'RIFF' && bytes.toString('ascii', 8, 12) === 'WEBP';
+  const type = png ? 'image/png' : jpeg ? 'image/jpeg' : webp ? 'image/webp' : null;
+  const expected = {'.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg', '.webp':'image/webp'}[extension];
+  if (!type || type !== expected) throw new Error('Invalid image signature or extension');
+  return type;
 }
 
 async function download(asset) {
@@ -35,11 +40,16 @@ async function download(asset) {
   try {
     const metadata = await stat(absolutePath);
     if (metadata.isFile()) {
+      if (!metadata.size || metadata.size > maxAssetBytes) throw new Error('Invalid cached asset size');
+      const bytes = await readFile(absolutePath);
+      const hash = createHash('sha256').update(bytes).digest('hex');
+      if (asset.sha256 && hash !== asset.sha256) throw new Error('Cached asset SHA-256 mismatch');
       return {
+        contentType: validateImage(bytes, extname(relativePath)),
         url: asset.url,
         path: relativePath,
         bytes: metadata.size,
-        sha256: await sha256(absolutePath),
+        sha256: hash,
         reused: true
       };
     }
@@ -47,7 +57,7 @@ async function download(asset) {
     if (error.code !== 'ENOENT') throw error;
   }
 
-  const response = await fetch(asset.url, { redirect: 'follow' });
+  const response = await fetch(asset.url, { redirect: 'follow', signal: AbortSignal.timeout(60_000) });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
 
   const contentType = (response.headers.get('content-type') || '').split(';')[0].trim().toLowerCase();
@@ -56,7 +66,18 @@ async function download(asset) {
   const declaredSize = Number(response.headers.get('content-length') || 0);
   if (declaredSize > maxAssetBytes) throw new Error(`Asset exceeds ${maxAssetBytes} bytes`);
 
-  const bytes = Buffer.from(await response.arrayBuffer());
+  const chunks = [];
+  let received = 0;
+  for await (const chunk of response.body) {
+    received += chunk.length;
+    if (received > maxAssetBytes) throw new Error(`Asset exceeds ${maxAssetBytes} bytes`);
+    chunks.push(chunk);
+  }
+  const bytes = Buffer.concat(chunks);
+  const detectedType = validateImage(bytes, extname(relativePath));
+  if (detectedType !== contentType) throw new Error('Image content type does not match signature');
+  const hash = createHash('sha256').update(bytes).digest('hex');
+  if (asset.sha256 && hash !== asset.sha256) throw new Error('Downloaded asset SHA-256 mismatch');
   if (!bytes.length || bytes.length > maxAssetBytes) throw new Error(`Invalid asset size ${bytes.length}`);
 
   const temporaryPath = `${absolutePath}.download`;
@@ -68,7 +89,7 @@ async function download(asset) {
     path: relativePath,
     contentType,
     bytes: bytes.length,
-    sha256: createHash('sha256').update(bytes).digest('hex'),
+    sha256: hash,
     reused: false
   };
 }
@@ -80,7 +101,7 @@ const results = [];
 const failures = [];
 
 for (const asset of manifest.assets) {
-  if (asset.localEquivalent) continue;
+  if (asset.localEquivalent && !asset.localEquivalent.startsWith('assets/wix-preserved/')) continue;
   try {
     const result = await download(asset);
     results.push(result);
@@ -94,7 +115,7 @@ for (const asset of manifest.assets) {
 const index = {
   version: 1,
   generatedAt: new Date().toISOString(),
-  verification: 'TLS enabled; image content type; 25 MiB size limit; SHA-256 recorded',
+  verification: 'TLS enabled; image content type and signature; streamed 25 MiB size limit; SHA-256 verified/recorded',
   assets: results.map(({ reused, ...result }) => result),
   failures
 };
