@@ -1,0 +1,128 @@
+[
+  {
+    "viewport": 390,
+    "route": "product-04-decision-card.html",
+    "slide": 1,
+    "src": "http://127.0.0.1:4175/assets/kit-optimized/decision-640.webp",
+    "width": 351,
+    "loaded": true,
+    "srcset": "/assets/kit-optimized/decision-640.webp 640w, /assets/kit-optimized/decision-1200.webp 990w"
+  },
+  {
+    "viewport": 390,
+    "route": "product-04-decision-card.html",
+    "slide": 2,
+    "src": "http://127.0.0.1:4175/assets/kit-optimized/decision-page-640.webp",
+    "width": 351,
+    "loaded": true,
+    "srcset": "/assets/kit-optimized/decision-page-640.webp 640w, /assets/kit-optimized/decision-page-1200.webp 778w"
+  },
+  {
+    "viewport": 390,
+    "route": "product-05-message-starters.html",
+    "slide": 1,
+    "src": "http://127.0.0.1:4175/assets/kit-optimized/messages-640.webp",
+    "width": 351,
+    "loaded": true,
+    "srcset": "/assets/kit-optimized/messages-640.webp 640w, /assets/kit-optimized/messages-1200.webp 990w"
+  },
+  {
+    "viewport": 390,
+    "route": "product-05-message-starters.html",
+    "slide": 2,
+    "src": "http://127.0.0.1:4175/assets/messages-page.webp",
+    "width": 426,
+    "loaded": true,
+    "srcset": ""
+  },
+  {
+    "viewport": 390,
+    "route": "product-01-start-here.html",
+    "slide": 1,
+    "src": "http://127.0.0.1:4175/assets/kit-optimized/53e940_e1e58ff5c94d49d3a328e1bc1e696be1~mv2-640.webp",
+    "width": 351,
+    "loaded": true,
+    "srcset": "/assets/kit-optimized/53e940_e1e58ff5c94d49d3a328e1bc1e696be1~mv2-640.webp 640w, /assets/kit-optimized/53e940_e1e58ff5c94d49d3a328e1bc1e696be1~mv2-1200.webp 1200w"
+  },
+  {
+    "viewport": 390,
+    "route": "product-01-start-here.html",
+    "slide": 2,
+    "src": "http://127.0.0.1:4175/assets/kit-optimized/53e940_4c96ea50bd1f439287deae7db053ef23~mv2-640.webp",
+    "width": 351,
+    "loaded": true,
+    "srcset": "/assets/kit-optimized/53e940_4c96ea50bd1f439287deae7db053ef23~mv2-640.webp 640w, /assets/kit-optimized/53e940_4c96ea50bd1f439287deae7db053ef23~mv2-1200.webp 1200w"
+  },
+  {
+    "viewport": 390,
+    "route": "product-01-start-here.html",
+    "slide": 3,
+    "src": "http://127.0.0.1:4175/assets/kit-optimized/53e940_0b6db3d9c3d344a5b19c450bb484b4ab~mv2-640.webp",
+    "width": 351,
+    "loaded": true,
+    "srcset": "/assets/kit-optimized/53e940_0b6db3d9c3d344a5b19c450bb484b4ab~mv2-640.webp 640w, /assets/kit-optimized/53e940_0b6db3d9c3d344a5b19c450bb484b4ab~mv2-1200.webp 1200w"
+  },
+  {
+    "viewport": 1440,
+    "route": "product-04-decision-card.html",
+    "slide": 1,
+    "src": "http://127.0.0.1:4175/assets/kit-optimized/decision-1200.webp",
+    "width": 700,
+    "loaded": true,
+    "srcset": "/assets/kit-optimized/decision-640.webp 640w, /assets/kit-optimized/decision-1200.webp 990w"
+  },
+  {
+    "viewport": 1440,
+    "route": "product-04-decision-card.html",
+    "slide": 2,
+    "src": "http://127.0.0.1:4175/assets/kit-optimized/decision-page-1200.webp",
+    "width": 700,
+    "loaded": true,
+    "srcset": "/assets/kit-optimized/decision-page-640.webp 640w, /assets/kit-optimized/decision-page-1200.webp 778w"
+  },
+  {
+    "viewport": 1440,
+    "route": "product-05-message-starters.html",
+    "slide": 1,
+    "src": "http://127.0.0.1:4175/assets/kit-optimized/messages-1200.webp",
+    "width": 700,
+    "loaded": true,
+    "srcset": "/assets/kit-optimized/messages-640.webp 640w, /assets/kit-optimized/messages-1200.webp 990w"
+  },
+  {
+    "viewport": 1440,
+    "route": "product-05-message-starters.html",
+    "slide": 2,
+    "src": "http://127.0.0.1:4175/assets/messages-page.webp",
+    "width": 550,
+    "loaded": true,
+    "srcset": ""
+  },
+  {
+    "viewport": 1440,
+    "route": "product-01-start-here.html",
+    "slide": 1,
+    "src": "http://127.0.0.1:4175/assets/kit-optimized/53e940_e1e58ff5c94d49d3a328e1bc1e696be1~mv2-1200.webp",
+    "width": 700,
+    "loaded": true,
+    "srcset": "/assets/kit-optimized/53e940_e1e58ff5c94d49d3a328e1bc1e696be1~mv2-640.webp 640w, /assets/kit-optimized/53e940_e1e58ff5c94d49d3a328e1bc1e696be1~mv2-1200.webp 1200w"
+  },
+  {
+    "viewport": 1440,
+    "route": "product-01-start-here.html",
+    "slide": 2,
+    "src": "http://127.0.0.1:4175/assets/kit-optimized/53e940_4c96ea50bd1f439287deae7db053ef23~mv2-1200.webp",
+    "width": 700,
+    "loaded": true,
+    "srcset": "/assets/kit-optimized/53e940_4c96ea50bd1f439287deae7db053ef23~mv2-640.webp 640w, /assets/kit-optimized/53e940_4c96ea50bd1f439287deae7db053ef23~mv2-1200.webp 1200w"
+  },
+  {
+    "viewport": 1440,
+    "route": "product-01-start-here.html",
+    "slide": 3,
+    "src": "http://127.0.0.1:4175/assets/kit-optimized/53e940_0b6db3d9c3d344a5b19c450bb484b4ab~mv2-1200.webp",
+    "width": 700,
+    "loaded": true,
+    "srcset": "/assets/kit-optimized/53e940_0b6db3d9c3d344a5b19c450bb484b4ab~mv2-640.webp 640w, /assets/kit-optimized/53e940_0b6db3d9c3d344a5b19c450bb484b4ab~mv2-1200.webp 1200w"
+  }
+]

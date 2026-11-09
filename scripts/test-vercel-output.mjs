@@ -17,6 +17,8 @@ const forbiddenPatterns = [
 ];
 
 assert.ok(existsSync(outputRoot), 'dist must exist; run node scripts/build-independent.mjs');
+assert.equal(existsSync(join(outputRoot, 'assets', 'wix-preserved')), false,
+  'Archived originals must not ship in the optimized build');
 
 for (const { path } of routes) {
   const file = path === '/' ? 'index.html' : path.replace(/^\//, '');

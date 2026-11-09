@@ -80,14 +80,24 @@ with sync_playwright() as playwright:
             page.locator("#menuOverlay .menu-close").click()
             page.close()
 
-        page = context.new_page()
-        page.set_viewport_size({"width":1024,"height":900})
-        page.goto(f"{base_url}/product-04-decision-card.html", wait_until="domcontentloaded")
-        main_image = page.locator("[data-main-image]")
-        original_source = main_image.get_attribute("src")
-        page.locator("[data-product-thumb]").nth(1).click()
-        assert main_image.get_attribute("src") != original_source
-        page.close()
+        for width in (390, 1440):
+            for route in ("product-04-decision-card.html", "product-05-message-starters.html"):
+                page = context.new_page()
+                page.set_viewport_size({"width":width,"height":900})
+                page.goto(f"{base_url}/{route}", wait_until="networkidle")
+                buttons = page.locator("[data-product-thumb]")
+                for index in range(buttons.count()):
+                    button = buttons.nth(index)
+                    button.click()
+                    expected = button.get_attribute("data-src").split("/")[-1].replace("-1200.webp", "")
+                    page.wait_for_function("""expected => {
+                        const image = document.querySelector('[data-main-image]');
+                        return image.complete && image.naturalWidth > 0 && image.currentSrc.includes(expected);
+                    }""", arg=expected)
+                    # A nonresponsive slide must clear the prior slide's srcset.
+                    actual = page.locator("[data-main-image]").get_attribute("srcset") or ""
+                    assert actual == (button.get_attribute("data-srcset") or "")
+                page.close()
 
         page = context.new_page()
         page.set_viewport_size({"width":1024,"height":900})

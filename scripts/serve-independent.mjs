@@ -10,6 +10,7 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 export const projectRoot = resolve(scriptDirectory, '..');
 const manifestPath = join(projectRoot, 'migration', 'wix-media-manifest.json');
 const preservedIndexPath = join(projectRoot, 'assets', 'wix-preserved', 'index.json');
+const optimizedIndexPath = join(projectRoot, 'assets', 'kit-optimized', 'index.json');
 
 const contentTypes = new Map([
   ['.css', 'text/css; charset=utf-8'],
@@ -57,7 +58,19 @@ export function loadMediaState() {
     .filter((asset) => !replacements.has(asset.url))
     .map(({ url, referencedBy }) => ({ url, referencedBy }));
 
-  return { manifest, replacements, unresolved };
+  const optimized = new Map();
+  for (const asset of readJson(optimizedIndexPath, { assets: [] }).assets) {
+    for (const variant of asset.variants) {
+      const path = join(projectRoot, variant.path);
+      if (!existsSync(path)) throw new Error(`Missing optimized image: ${variant.path}`);
+      const bytes = readFileSync(path);
+      if (createHash('sha256').update(bytes).digest('hex') !== variant.sha256) {
+        throw new Error(`Optimized media integrity mismatch: ${variant.path}`);
+      }
+    }
+    optimized.set(asset.source, asset);
+  }
+  return { manifest, replacements, unresolved, optimized };
 }
 
 const wixBootstrapPattern = /<script\s+id=["']wix-site-script["'][^>]*><\/script>/gi;
@@ -69,7 +82,34 @@ export function transformText(pathname, source, mediaState = loadMediaState()) {
     output = output.split(remoteUrl).join(localUrl);
   }
 
+  for (const [source, asset] of mediaState.optimized || []) {
+    output = output.split(source).join(asset.variants.at(-1).path);
+  }
+
   if (extname(pathname) !== '.html') return output;
+
+  const byPath = new Map([...mediaState.optimized?.values() || []]
+    .map(asset => [asset.variants.at(-1).path, asset]));
+  const cardSizes = '(max-width: 767px) 86vw, (max-width: 1100px) 42vw, 32vw';
+  const mainSizes = '(max-width: 767px) 90vw, (max-width: 1100px) 50vw, 700px';
+  output = output.replace(/<img\b[^>]*>/gi, tag => {
+    const src = tag.match(/\bsrc="\/?([^"]+)"/);
+    const asset = src && byPath.get(src[1]);
+    if (!asset) return tag;
+    // Tiny thumbnails should not trigger full-size gallery downloads.
+    const closing = tag.endsWith('/>') ? '/>' : '>';
+    const rest = tag.slice(0, -closing.length);
+    const srcset = asset.variants.slice(1).map(v => `/${v.path} ${v.width}w`).join(', ');
+    return `${rest} srcset="${srcset}" sizes="${tag.includes('data-main-image') ? mainSizes : cardSizes}"${closing}`;
+  });
+  output = output.replace(/<button\b[^>]*data-product-thumb[^>]*>[\s\S]*?<\/button>/gi, button => {
+    const src = button.match(/\bdata-src="\/?([^"]+)"/);
+    const asset = src && byPath.get(src[1]);
+    if (!asset) return button;
+    const srcset = asset.variants.slice(1).map(v => `/${v.path} ${v.width}w`).join(', ');
+    return button.replace('data-product-thumb', `data-product-thumb data-srcset="${srcset}" data-sizes="${mainSizes}"`)
+      .replace(/<img\b[^>]*>/, `<img src="/${asset.variants[0].path}" alt="" loading="lazy" decoding="async"/>`);
+  });
 
   output = output.replace(wixBootstrapPattern, '');
   output = output.replace(/src=["']member-nav\.js(?:\?[^"']*)?["']/g, 'src="/independent/member-nav.js"');
