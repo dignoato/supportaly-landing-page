@@ -86,10 +86,12 @@ with sync_playwright() as playwright:
                 page.set_viewport_size({"width":width,"height":900})
                 page.goto(f"{base_url}/{route}", wait_until="networkidle")
                 buttons = page.locator("[data-product-thumb]")
+                assert buttons.count() == 3, f"{route} must show all three supplied images"
                 for index in range(buttons.count()):
                     button = buttons.nth(index)
                     button.click()
                     expected = button.get_attribute("data-src").split("/")[-1].replace("-1200.webp", "")
+                    assert expected == f"{route.split('-')[1]}-{index + 1}", (route, expected)
                     page.wait_for_function("""expected => {
                         const image = document.querySelector('[data-main-image]');
                         return image.complete && image.naturalWidth > 0 && image.currentSrc.includes(expected);

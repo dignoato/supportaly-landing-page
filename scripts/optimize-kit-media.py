@@ -17,8 +17,9 @@ def main():
     manifest = json.loads((ROOT / 'migration/wix-media-manifest.json').read_text())
     OUTPUT.mkdir(parents=True, exist_ok=True)
     assets = []
-    for asset in manifest['assets']:
-        source = ROOT / asset['localEquivalent']
+    sources = [ROOT / asset['localEquivalent'] for asset in manifest['assets']]
+    sources += sorted((ROOT / 'assets/product-originals').glob('*.png'))
+    for source in sources:
         variants = []
         with Image.open(source) as original:
             image = ImageOps.exif_transpose(original).convert('RGB')

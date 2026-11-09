@@ -13,7 +13,7 @@ await mkdir(outputRoot, { recursive: true });
 
 const mediaState = loadMediaState();
 if (mediaState.unresolved.length) throw new Error('All Wix media must be preserved before building');
-if (mediaState.optimized.size !== mediaState.manifest.assets.length) {
+if (!mediaState.manifest.assets.every(asset => mediaState.optimized.has(asset.localEquivalent))) {
   throw new Error('Generate optimized media first: python3 scripts/optimize-kit-media.py');
 }
 const rootEntries = await readdir(projectRoot, { withFileTypes: true });
@@ -32,6 +32,7 @@ for (const entry of rootEntries) {
 await cp(join(projectRoot, 'assets'), join(outputRoot, 'assets'), { recursive: true });
 // Preserve originals in Git, but ship only their compact image derivatives.
 await rm(join(outputRoot, 'assets', 'wix-preserved'), { recursive: true, force: true });
+await rm(join(outputRoot, 'assets', 'product-originals'), { recursive: true, force: true });
 await rm(join(outputRoot, 'assets', 'kit-optimized', 'index.json'), { force: true });
 await cp(join(projectRoot, 'independent'), join(outputRoot, 'independent'), { recursive: true });
 

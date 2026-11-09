@@ -23,7 +23,7 @@
         no: 'Describe one ordinary day in the future home: who uses it, what they do and what needs to work comfortably.'
       } },
     { name: 'Decisions', question: 'Is it clear who makes decisions, even if that is just you, and how choices will be recorded?',
-      document: { name: '04 Decision Card · EN/IT', href: 'product-04-decision-card.html', image: 'https://static.wixstatic.com/media/53e940_66dbd92942cc4ee492e5be9743b3eb3f~mv2.png', alt: 'Inside preview of the bilingual Decision Card', explanation: 'The Decision Card provides English and Italian fields for recording proposals, confirmations, open points and who acts next.' },
+      document: { name: '04 Decision Card · EN/IT', href: 'product-04-decision-card.html', image: 'assets/product-originals/04-2.png', alt: 'Inside preview of the bilingual Decision Card', explanation: 'The Decision Card provides English and Italian fields for recording proposals, confirmations, open points and who acts next.' },
       advice: {
         yes: 'Choose one upcoming decision. Record who decides, whose input is needed and where the confirmation will be kept.',
         partly: 'Identify what is missing: the decision maker, other people’s input or a way to record the choice.',

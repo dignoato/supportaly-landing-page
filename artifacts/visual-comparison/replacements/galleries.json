@@ -1,0 +1,86 @@
+[
+  {
+    "viewport": 390,
+    "product": "04",
+    "slide": 1,
+    "url": "http://127.0.0.1:4176/assets/kit-optimized/04-1-640.webp",
+    "width": 351
+  },
+  {
+    "viewport": 390,
+    "product": "04",
+    "slide": 2,
+    "url": "http://127.0.0.1:4176/assets/kit-optimized/04-2-640.webp",
+    "width": 351
+  },
+  {
+    "viewport": 390,
+    "product": "04",
+    "slide": 3,
+    "url": "http://127.0.0.1:4176/assets/kit-optimized/04-3-640.webp",
+    "width": 351
+  },
+  {
+    "viewport": 390,
+    "product": "05",
+    "slide": 1,
+    "url": "http://127.0.0.1:4176/assets/kit-optimized/05-1-640.webp",
+    "width": 351
+  },
+  {
+    "viewport": 390,
+    "product": "05",
+    "slide": 2,
+    "url": "http://127.0.0.1:4176/assets/kit-optimized/05-2-640.webp",
+    "width": 351
+  },
+  {
+    "viewport": 390,
+    "product": "05",
+    "slide": 3,
+    "url": "http://127.0.0.1:4176/assets/kit-optimized/05-3-640.webp",
+    "width": 351
+  },
+  {
+    "viewport": 1440,
+    "product": "04",
+    "slide": 1,
+    "url": "http://127.0.0.1:4176/assets/kit-optimized/04-1-1200.webp",
+    "width": 700
+  },
+  {
+    "viewport": 1440,
+    "product": "04",
+    "slide": 2,
+    "url": "http://127.0.0.1:4176/assets/kit-optimized/04-2-1200.webp",
+    "width": 700
+  },
+  {
+    "viewport": 1440,
+    "product": "04",
+    "slide": 3,
+    "url": "http://127.0.0.1:4176/assets/kit-optimized/04-3-1200.webp",
+    "width": 700
+  },
+  {
+    "viewport": 1440,
+    "product": "05",
+    "slide": 1,
+    "url": "http://127.0.0.1:4176/assets/kit-optimized/05-1-1200.webp",
+    "width": 700
+  },
+  {
+    "viewport": 1440,
+    "product": "05",
+    "slide": 2,
+    "url": "http://127.0.0.1:4176/assets/kit-optimized/05-2-1200.webp",
+    "width": 700
+  },
+  {
+    "viewport": 1440,
+    "product": "05",
+    "slide": 3,
+    "url": "http://127.0.0.1:4176/assets/kit-optimized/05-3-1200.webp",
+    "width": 700
+  }
+]

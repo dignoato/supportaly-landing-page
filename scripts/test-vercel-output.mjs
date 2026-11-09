@@ -19,6 +19,8 @@ const forbiddenPatterns = [
 assert.ok(existsSync(outputRoot), 'dist must exist; run node scripts/build-independent.mjs');
 assert.equal(existsSync(join(outputRoot, 'assets', 'wix-preserved')), false,
   'Archived originals must not ship in the optimized build');
+assert.equal(existsSync(join(outputRoot, 'assets', 'product-originals')), false,
+  'Uploaded PNG originals must not ship in the optimized build');
 
 for (const { path } of routes) {
   const file = path === '/' ? 'index.html' : path.replace(/^\//, '');
@@ -45,6 +47,7 @@ await collect(outputRoot);
 
 for (const file of textFiles) {
   const text = await readFile(file, 'utf8');
+  assert.doesNotMatch(text, /assets\/(?:product-originals|wix-preserved)\//i, `${file} references an undeployed image original`);
   assert.doesNotMatch(text, /manage\.wix\.com\/_api\/headless-business-setup/i, `${file} loads Wix bootstrap`);
   assert.doesNotMatch(text, /www\.wixapis\.com/i, `${file} loads Wix APIs`);
   assert.doesNotMatch(text, /static\.(?:wixstatic|parastorage)\.com/i, `${file} contains Wix media`);
