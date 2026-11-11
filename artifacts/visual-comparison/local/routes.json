@@ -1,0 +1,108 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "images": 30,
+      "brokenImages": []
+    },
+    {
+      "path": "/login.html",
+      "status": 200,
+      "images": 0,
+      "brokenImages": []
+    },
+    {
+      "path": "/account.html",
+      "status": 200,
+      "images": 0,
+      "brokenImages": []
+    },
+    {
+      "path": "/professionals.html",
+      "status": 200,
+      "images": 2,
+      "brokenImages": []
+    },
+    {
+      "path": "/impressum.html",
+      "status": 200,
+      "images": 0,
+      "brokenImages": []
+    },
+    {
+      "path": "/credits.html",
+      "status": 200,
+      "images": 0,
+      "brokenImages": []
+    },
+    {
+      "path": "/terms-and-conditions.html",
+      "status": 200,
+      "images": 0,
+      "brokenImages": []
+    },
+    {
+      "path": "/privacy-policy.html",
+      "status": 200,
+      "images": 0,
+      "brokenImages": []
+    },
+    {
+      "path": "/refund-policy.html",
+      "status": 200,
+      "images": 0,
+      "brokenImages": []
+    },
+    {
+      "path": "/cookies-policy.html",
+      "status": 200,
+      "images": 0,
+      "brokenImages": []
+    },
+    {
+      "path": "/product-01-start-here.html",
+      "status": 200,
+      "images": 7,
+      "brokenImages": []
+    },
+    {
+      "path": "/product-02-client-workbook.html",
+      "status": 200,
+      "images": 7,
+      "brokenImages": []
+    },
+    {
+      "path": "/product-03-architect-handover.html",
+      "status": 200,
+      "images": 7,
+      "brokenImages": []
+    },
+    {
+      "path": "/product-04-decision-card.html",
+      "status": 200,
+      "images": 7,
+      "brokenImages": []
+    },
+    {
+      "path": "/product-05-message-starters.html",
+      "status": 200,
+      "images": 7,
+      "brokenImages": []
+    },
+    {
+      "path": "/product-06-filled-example.html",
+      "status": 200,
+      "images": 7,
+      "brokenImages": []
+    },
+    {
+      "path": "/product-clarity-kit-bundle.html",
+      "status": 200,
+      "images": 6,
+      "brokenImages": []
+    }
+  ],
+  "externalRequests": [],
+  "failures": []
+}

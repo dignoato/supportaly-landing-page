@@ -1,0 +1,143 @@
+/* SUPPORTALY TYPOGRAPHY SYSTEM | T01–T11 | 2026-11-10
+   Authoritative last-loaded layer. Legacy selectors may remain until cleanup.
+   Desktop >=1200px | Tablet 768–1199px | Mobile <=767px.
+   Typography only: preserves layout, colors, content, imagery and behaviour. */
+:root{
+ --su-type-t01:96px;--su-type-t02:96px;--su-type-t03:56px;--su-type-t04:32px;
+ --su-type-t05:24px;--su-type-t06:18px;--su-type-t07:16px;--su-type-t08:14px;
+ --su-type-t09:11px;--su-type-t10:14px;--su-type-t11:12px;
+ --su-type-heading:var(--supportaly-heading-font,"Segoe UI Variable Display","Segoe UI",Arial,sans-serif);
+ --su-type-body:var(--supportaly-body-font,Arial,Helvetica,sans-serif);
+ --su-type-editorial:var(--supportaly-serif,"Iowan Old Style",Baskerville,Georgia,serif);
+}
+@media(min-width:768px) and (max-width:1199px){
+ :root{--su-type-t01:72px;--su-type-t02:76px;--su-type-t03:48px;--su-type-t04:28px;--su-type-t05:22px}
+}
+@media(max-width:767px){
+ :root{--su-type-t01:44px;--su-type-t02:48px;--su-type-t03:36px;--su-type-t04:28px;--su-type-t05:20px;--su-type-t06:17px}
+}
+/* T01 · Main display heading */
+main .v6-hero.hero--step2 .hero-copy .hero-h1,
+main .product-summary h1,main .pro-editorial .pro-editorial-opening h1,main .legal-heading h1,
+body.account-body .auth-intro h1,body.account-body .account-title h1{
+ font-family:var(--su-type-heading)!important;font-size:var(--su-type-t01)!important;
+ font-weight:635!important;line-height:.98!important;letter-spacing:-.06em!important;
+}
+/* T02 · Large editorial heading */
+main .shared-understanding .understanding-intro h2,main .v6-simple .section-heading h2,
+main .v6-kit .section-heading h2,main .v6-offer .supportaly-note h2,
+main .v6-final .final-copy h2,main .pro-editorial .pro-process h2,
+main .product-bottom-cta h2{
+ font-family:var(--su-type-heading)!important;font-size:var(--su-type-t02)!important;
+ font-weight:635!important;line-height:1!important;letter-spacing:-.055em!important;
+}
+/* T03 · Standard section heading */
+main .kit-proof .kit-proof-copy h2,main .v6-clarity .section-heading h2,
+main .v6-comparison .comparison-intro h2,main .v6-faq .faq-heading h2,
+main #creator.creator-section h2,main .product-section-copy h2,
+main .product-callout h2,main .pro-editorial .boundary-note h3,
+main .pro-editorial .pro-lead,main .legal-grid h2,
+body.account-body .auth-panel h2,body.account-body .account-panel-heading h2{
+ font-family:var(--su-type-heading)!important;font-size:var(--su-type-t03)!important;
+ font-weight:635!important;line-height:1.08!important;letter-spacing:-.045em!important;
+}
+/* T04 · Subheading; same size for all Clarity Kit cards */
+main .understanding-roles h3,main .v6-simple .three-steps h3,
+main .v6-kit .kit-card h3,main .v6-kit .kit-card:nth-child(2) h3,
+main .v6-kit .kit-card:nth-child(6) h3,main #kit-fit .kit-benefit h3,
+main #kit-fit .kit-fit-grid h3,main #clarity [data-guided-clarity] h3,
+main .product-feature h3,main .product-boundary h3,main .related-card h3,
+main .pro-editorial .professional-benefits h3,main .pro-editorial .pro-steps h3,
+main .legal-content h3{
+ font-family:var(--su-type-heading)!important;font-size:var(--su-type-t04)!important;
+ font-weight:635!important;line-height:1.15!important;letter-spacing:-.035em!important;
+}
+/* T05 · Serif editorial lead */
+main .v6-hero .hero-copy .lede,main .v6-hero .hero-copy .lede p,
+main .kit-proof .kit-proof-copy p,main .shared-understanding .understanding-intro p,
+main .shared-understanding .understanding-outro,main .manifesto .manifesto-story p,
+main .v6-chapter .section-heading>p:not(.eyebrow),main .v6-comparison .comparison-intro>p,
+main .v6-kit .kit-intro,main .v6-kit .kit-intro-controls .kit-intro,
+main #creator .creator-copy .creator-lead,main .product-lead,main .product-section-copy>p,
+main .pro-editorial .pro-editorial-opening-aside p,
+main .pro-editorial .pro-context .lede-small p,
+main .v6-final .final-copy>p:not(.eyebrow){
+ font-family:var(--su-type-editorial)!important;font-size:var(--su-type-t05)!important;
+ font-weight:400!important;line-height:1.4!important;letter-spacing:-.012em!important;
+}
+/* T06 · Body large and FAQ questions */
+main .v6-simple .three-steps p,main .v6-how .four-steps article p,
+main .v6-offer .supportaly-note>p:not(.eyebrow),main .v6-offer .offer-list li,
+main .v6-faq .faq-grid summary,main .v6-comparison .comparison-row>div{
+ font-family:var(--su-type-body)!important;font-size:var(--su-type-t06)!important;
+ font-weight:400!important;line-height:1.5!important;letter-spacing:0!important;
+}
+main .v6-faq .faq-grid summary{font-weight:600!important}
+/* T07 · Body regular */
+main .shared-understanding .understanding-role p,
+main .v6-kit .kit-card p,main .v6-kit .kit-card:nth-child(2) p,
+main .v6-kit .kit-card:nth-child(6) p,
+main #kit-fit .kit-benefit p,main #kit-fit .kit-fit-grid p,
+main #creator .creator-copy p:not(.creator-lead),main .v6-faq .faq-grid details p,
+main .product-feature p,main .product-boundary p,main .related-card p,
+main .product-meta dd,main .pro-editorial .professional-benefits p,
+main .pro-editorial .pro-steps p,main .pro-editorial .boundary-note .boundary-copy p,
+main .legal-content p,main .legal-content li,
+main #clarity [data-guided-clarity] .gc-question-card p:not(.gc-eyebrow),
+main #clarity [data-guided-clarity] .gc-results p,
+body.account-body .account-empty p,body.account-body .auth-intro>p:not(.eyebrow),
+body.account-body .account-title>p:not(.eyebrow),body.account-body .auth-panel input,
+main .checkout-dialog p{
+ font-family:var(--su-type-body)!important;font-size:var(--su-type-t07)!important;
+ font-weight:400!important;line-height:1.55!important;letter-spacing:0!important;
+}
+/* T08 · Secondary description */
+main .v6-hero .hero-credit,main .v6-offer .offer-meta,
+main #inside .catalogue-release-status,main #next-step .final-release-status,
+main .v6-kit .kit-price-disclaimer,main .product-availability,
+.site-footer .footer-identity .footer-description,
+body.account-body .auth-note,body.account-body .form-message,
+main #clarity [data-guided-clarity] .gc-results .gc-note{
+ font-family:var(--su-type-body)!important;font-size:var(--su-type-t08)!important;
+ font-weight:400!important;line-height:1.45!important;letter-spacing:0!important;
+}
+/* T09 · Eyebrow, small caps, metadata label */
+main .eyebrow,main .mini-label,main .section-index,main .kit-proof-index,
+main .understanding-index,main .understanding-label,
+main .product-kicker,main .product-breadcrumb,main .product-section-label,
+main .product-meta dt,main .v6-kit .shop-number,
+main .v6-kit .shop-meta,main .v6-kit .shop-top,
+main .v6-kit .shop-price-label,
+main .pro-editorial .pro-editorial-kicker,
+main .pro-editorial .pro-editorial-section-label,
+main .legal-kicker,.site-footer .footer-nav h2,
+body.account-body .auth-panel label,body.account-body .profile-grid span,
+main #clarity [data-guided-clarity] .gc-eyebrow,
+main #clarity [data-guided-clarity] .gc-progress{
+ font-family:var(--su-type-body)!important;font-size:var(--su-type-t09)!important;
+ font-weight:700!important;line-height:1.3!important;
+ letter-spacing:.1em!important;text-transform:uppercase!important;
+}
+/* T10 · Text actions; icon-only controls excluded */
+.site-header .header-nav-link,.site-header .header-get-kit,
+.site-header .header-actions a:not(.brand),main a.button,main button.button,
+main .kit-proof-link,main .faq-heading>a,main .product-buy,
+main .shop-detail-link,main .v6-kit .kit-card .shop-buy,
+main .v6-kit .kit-filter,main .pro-editorial .pro-editorial-link,
+main .legal-actions a,.site-footer .footer-nav a,
+main #clarity [data-guided-clarity] .gc-question-card button,
+main #clarity [data-guided-clarity] .gc-result-actions a,
+main #clarity [data-guided-clarity] .gc-open-list summary,
+body.account-body .auth-panel .auth-tab,body.account-body .account-tabs a{
+ font-family:var(--su-type-body)!important;font-size:var(--su-type-t10)!important;
+ font-weight:600!important;line-height:1.4!important;letter-spacing:0!important;
+}
+/* T11 · Captions, fine print and hero bundle metadata */
+main .hero-actions>span,main .kit-proof-pages figcaption,
+main .page-previews figcaption,main .product-demo-grid figcaption,
+main #clarity [data-guided-clarity] figcaption,main .creator-nature figcaption,
+main .hero-visual figcaption,.site-footer .footer-bottom,
+main .product-price span{
+ font-family:var(--su-type-body)!important;font-size:var(--su-type-t11)!important;
+ font-weight:400!important;line-height:1.4!important;letter-spacing:.02em!important;
+}

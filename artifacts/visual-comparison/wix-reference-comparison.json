@@ -1,0 +1,179 @@
+{
+  "referenceUrl": "https://headless-ppuxhjvtpfv-diegognoato-140b.wix-site-host.com/index.html",
+  "sourceHtmlMatchesRepositoryExactly": true,
+  "sourceHtmlSha256": "4e481d815d816e1cb63807084403b344437d0ed29d94602155131fcc60f8c7c4",
+  "results": [
+    {
+      "viewport": "desktop-1440",
+      "size": [
+        1440,
+        13517
+      ],
+      "localSize": [
+        1440,
+        13517
+      ],
+      "rawPixelIdentical": false,
+      "differentPixels": 17843,
+      "differenceRegions": [
+        [
+          1205,
+          820,
+          1436,
+          896
+        ],
+        [
+          1255,
+          12992,
+          1415,
+          13006
+        ]
+      ],
+      "identifiedDifferences": [
+        "Wix hosting badge on hero image",
+        "Footer account link intentionally disabled in independent Step 1"
+      ],
+      "wixScreenshotSha256": "5b3418760cbcbf180259d29c886cf3b6de9ecdf9153edf50d506fb11beb329e7",
+      "localScreenshotSha256": "e841719ced7a04b5a5c749253c72e3f6a3ad6a199cfbb6f56d9ec2a056dcf555",
+      "brokenImages": [],
+      "httpFailures": [],
+      "failedRequests": [],
+      "expectedDifferenceAreas": [
+        [
+          1205,
+          820,
+          1436,
+          896
+        ],
+        [
+          1255,
+          12992,
+          1415,
+          13006
+        ]
+      ],
+      "pixelsOutsideExpectedDifferencesMatch": true,
+      "loadingStages": {
+        "beforeScroll": {
+          "sourcedImages": 29,
+          "notDecoded": 27
+        },
+        "afterScrollBeforeEager": {
+          "sourcedImages": 29,
+          "notDecoded": 16
+        },
+        "afterEagerDecode": {
+          "sourcedImages": 29,
+          "notDecoded": 0
+        }
+      }
+    },
+    {
+      "viewport": "mobile-390",
+      "size": [
+        390,
+        14643
+      ],
+      "localSize": [
+        390,
+        14643
+      ],
+      "rawPixelIdentical": false,
+      "differentPixels": 19236,
+      "differenceRegions": [
+        [
+          155,
+          764,
+          386,
+          840
+        ],
+        [
+          267,
+          14239,
+          353,
+          14251
+        ],
+        [
+          204,
+          14257,
+          253,
+          14269
+        ],
+        [
+          204,
+          14271,
+          274,
+          14283
+        ],
+        [
+          204,
+          14288,
+          274,
+          14300
+        ],
+        [
+          204,
+          14302,
+          249,
+          14311
+        ],
+        [
+          204,
+          14313,
+          249,
+          14314
+        ],
+        [
+          204,
+          14320,
+          249,
+          14329
+        ],
+        [
+          204,
+          14331,
+          249,
+          14332
+        ]
+      ],
+      "identifiedDifferences": [
+        "Wix hosting badge on hero image",
+        "Footer account link intentionally disabled in independent Step 1"
+      ],
+      "wixScreenshotSha256": "e188b0594af98bfd38ad7389bb2cc2f0b31bdbf3857be9f9430a25c89dc430d6",
+      "localScreenshotSha256": "147f07cf3b04a6afeedad540a99596dc00b3b3b8849871e154abee9c1add0726",
+      "brokenImages": [],
+      "httpFailures": [],
+      "failedRequests": [],
+      "expectedDifferenceAreas": [
+        [
+          155,
+          764,
+          386,
+          840
+        ],
+        [
+          204,
+          14239,
+          353,
+          14332
+        ]
+      ],
+      "pixelsOutsideExpectedDifferencesMatch": true,
+      "loadingStages": {
+        "beforeScroll": {
+          "sourcedImages": 29,
+          "notDecoded": 27
+        },
+        "afterScrollBeforeEager": {
+          "sourcedImages": 29,
+          "notDecoded": 19
+        },
+        "afterEagerDecode": {
+          "sourcedImages": 29,
+          "notDecoded": 0
+        }
+      }
+    }
+  ]
+}

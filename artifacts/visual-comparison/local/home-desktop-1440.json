@@ -1,0 +1,367 @@
+{
+  "url": "http://127.0.0.1:4174",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "capturedAt": "2026-11-09T10:40:48.092421+00:00",
+  "failedRequests": [],
+  "httpFailures": [],
+  "externalRequests": [],
+  "status": 200,
+  "title": "Supportaly \u2014 Renovation Clarity Kit",
+  "finalUrl": "http://127.0.0.1:4174/",
+  "height": 13517,
+  "horizontalOverflow": 0,
+  "fonts": {
+    "status": "loaded",
+    "faces": []
+  },
+  "images": [
+    {
+      "src": "assets/editorial/F17-hero.webp",
+      "currentSrc": "http://127.0.0.1:4174/assets/editorial/F17-hero.webp",
+      "alt": "Woman walking through a contemporary Italian living room",
+      "complete": true,
+      "width": 1000,
+      "height": 1000,
+      "visible": true
+    },
+    {
+      "src": "assets/editorial/F02.webp",
+      "currentSrc": "http://127.0.0.1:4174/assets/editorial/F02.webp",
+      "alt": "Contemporary Italian living room with olive-green sofa and terrace view",
+      "complete": true,
+      "width": 1122,
+      "height": 873,
+      "visible": true
+    },
+    {
+      "src": "assets/workbook-page.webp",
+      "currentSrc": "http://127.0.0.1:4174/assets/workbook-page.webp",
+      "alt": "Workbook page preview",
+      "complete": true,
+      "width": 778,
+      "height": 1100,
+      "visible": true
+    },
+    {
+      "src": "assets/handover-page.webp",
+      "currentSrc": "http://127.0.0.1:4174/assets/handover-page.webp",
+      "alt": "Handover page preview",
+      "complete": true,
+      "width": 778,
+      "height": 1100,
+      "visible": true
+    },
+    {
+      "src": "assets/editorial/F06.webp",
+      "currentSrc": "http://127.0.0.1:4174/assets/editorial/F06.webp",
+      "alt": "Renovated apartment doorways framing the next room and a person",
+      "complete": true,
+      "width": 1122,
+      "height": 1402,
+      "visible": true
+    },
+    {
+      "src": "assets/editorial/F08.webp",
+      "currentSrc": "http://127.0.0.1:4174/assets/editorial/F08.webp",
+      "alt": "Wood-lined Italian interior and suspended fireplace",
+      "complete": true,
+      "width": 1122,
+      "height": 1122,
+      "visible": true
+    },
+    {
+      "src": "assets/editorial/F18.webp",
+      "currentSrc": "http://127.0.0.1:4174/assets/editorial/F18.webp",
+      "alt": "Woman resting on the terrace of a renovated Italian home",
+      "complete": true,
+      "width": 1122,
+      "height": 873,
+      "visible": true
+    },
+    {
+      "src": "assets/workbook-page.webp",
+      "currentSrc": "http://127.0.0.1:4174/assets/workbook-page.webp",
+      "alt": "Example page from the Client Workbook",
+      "complete": true,
+      "width": 778,
+      "height": 1100,
+      "visible": false
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_c5e0bf46a51b4e7d970276d3f28f6122~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_c5e0bf46a51b4e7d970276d3f28f6122~mv2.png",
+      "alt": "The Clarity Kit bundle covers 01 to 03",
+      "complete": true,
+      "width": 1265,
+      "height": 1244,
+      "visible": true
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_b17503ba54ed4e10b8b86d178065aa73~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_b17503ba54ed4e10b8b86d178065aa73~mv2.png",
+      "alt": "The Clarity Kit bundle covers 04 to 06",
+      "complete": true,
+      "width": 1265,
+      "height": 1244,
+      "visible": false
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_e1e58ff5c94d49d3a328e1bc1e696be1~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_e1e58ff5c94d49d3a328e1bc1e696be1~mv2.png",
+      "alt": "Start Here product cover",
+      "complete": true,
+      "width": 1254,
+      "height": 1254,
+      "visible": true
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_4c96ea50bd1f439287deae7db053ef23~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_4c96ea50bd1f439287deae7db053ef23~mv2.png",
+      "alt": "Start Here inside preview 1",
+      "complete": true,
+      "width": 1315,
+      "height": 1197,
+      "visible": false
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_0b6db3d9c3d344a5b19c450bb484b4ab~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_0b6db3d9c3d344a5b19c450bb484b4ab~mv2.png",
+      "alt": "Start Here inside preview 2",
+      "complete": true,
+      "width": 1254,
+      "height": 1254,
+      "visible": false
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_fb25ef1d76ec498c96928fe032e54090~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_fb25ef1d76ec498c96928fe032e54090~mv2.png",
+      "alt": "Client Workbook product cover",
+      "complete": true,
+      "width": 1254,
+      "height": 1254,
+      "visible": true
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_4c3f1b5ec3ec4fecbe3525baf1ab767f~mv2.jpg",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_4c3f1b5ec3ec4fecbe3525baf1ab767f~mv2.jpg",
+      "alt": "Client Workbook preview image 1",
+      "complete": true,
+      "width": 2048,
+      "height": 2048,
+      "visible": false
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_818fc38c919340e788f83e1c6ed92e8c~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_818fc38c919340e788f83e1c6ed92e8c~mv2.png",
+      "alt": "Client Workbook preview image 2",
+      "complete": true,
+      "width": 1076,
+      "height": 1462,
+      "visible": false
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_ee843c7160f74b61bfb360f540129a1d~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_ee843c7160f74b61bfb360f540129a1d~mv2.png",
+      "alt": "Architect Handover product cover",
+      "complete": true,
+      "width": 1254,
+      "height": 1254,
+      "visible": true
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_a30e8505264d46c1b8fad71de26b701a~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_a30e8505264d46c1b8fad71de26b701a~mv2.png",
+      "alt": "Architect Handover preview image 1",
+      "complete": true,
+      "width": 1254,
+      "height": 1254,
+      "visible": false
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_87fb1f5642d44089ac41a4a3c9a3f791~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_87fb1f5642d44089ac41a4a3c9a3f791~mv2.png",
+      "alt": "Architect Handover preview image 2",
+      "complete": true,
+      "width": 1024,
+      "height": 1536,
+      "visible": false
+    },
+    {
+      "src": "/assets/decision.webp",
+      "currentSrc": "http://127.0.0.1:4174/assets/decision.webp",
+      "alt": "Decision Card product cover",
+      "complete": true,
+      "width": 990,
+      "height": 1400,
+      "visible": true
+    },
+    {
+      "src": "/assets/decision-page.webp",
+      "currentSrc": "http://127.0.0.1:4174/assets/decision-page.webp",
+      "alt": "Decision Card preview image 1",
+      "complete": true,
+      "width": 778,
+      "height": 1100,
+      "visible": false
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_eae9808cda1a4fa193eb2f2ec1141714~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_eae9808cda1a4fa193eb2f2ec1141714~mv2.png",
+      "alt": "Decision Card preview image 2",
+      "complete": true,
+      "width": 1212,
+      "height": 1298,
+      "visible": false
+    },
+    {
+      "src": "/assets/messages.webp",
+      "currentSrc": "http://127.0.0.1:4174/assets/messages.webp",
+      "alt": "Message Starters \u00b7 EN/IT product cover",
+      "complete": true,
+      "width": 990,
+      "height": 1400,
+      "visible": true
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_7d26e70c4db64b00b7e3f0e2ba845251~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_7d26e70c4db64b00b7e3f0e2ba845251~mv2.png",
+      "alt": "Message Starters \u00b7 EN/IT preview image 1",
+      "complete": true,
+      "width": 1254,
+      "height": 1254,
+      "visible": false
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_589bd7d64cab43febc108bff05eb877f~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_589bd7d64cab43febc108bff05eb877f~mv2.png",
+      "alt": "Message Starters \u00b7 EN/IT preview image 2",
+      "complete": true,
+      "width": 1254,
+      "height": 1254,
+      "visible": false
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_9bcce621740b498a920bf24288a84b1f~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_9bcce621740b498a920bf24288a84b1f~mv2.png",
+      "alt": "Filled Example product cover",
+      "complete": true,
+      "width": 1254,
+      "height": 1254,
+      "visible": true
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_2ad77f6e8ea2470aa09eef4024b643e2~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_2ad77f6e8ea2470aa09eef4024b643e2~mv2.png",
+      "alt": "Filled Example preview image 1",
+      "complete": true,
+      "width": 1234,
+      "height": 1274,
+      "visible": false
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_7bc981bf2e674f7284ec04d069f1eb70~mv2.png",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_7bc981bf2e674f7284ec04d069f1eb70~mv2.png",
+      "alt": "Filled Example preview image 2",
+      "complete": true,
+      "width": 1254,
+      "height": 1254,
+      "visible": false
+    },
+    {
+      "src": "/assets/wix-preserved/53e940_1838e098ceb74253a5e7b016c8ba3a6c~mv2.jpg",
+      "currentSrc": "http://127.0.0.1:4174/assets/wix-preserved/53e940_1838e098ceb74253a5e7b016c8ba3a6c~mv2.jpg",
+      "alt": "Olive-tree branches and textured bark against a pale stone wall",
+      "complete": true,
+      "width": 1200,
+      "height": 1800,
+      "visible": true
+    },
+    {
+      "src": "",
+      "currentSrc": "",
+      "alt": "",
+      "complete": true,
+      "width": 0,
+      "height": 0,
+      "visible": false
+    }
+  ],
+  "sections": [
+    {
+      "id": "",
+      "text": "SUPPORTALY CLARITY KIT\n\nRenovating in Italy?\nStart with a clearer brief.\n\nOrganise your ideas, priorities, budget limits and open questions before meeting your Italian architect or geometra. Prepare what you know and make clear where you need professional advice.\n\nExplore the Clarity Kit \u2197\n6 DIGITAL",
+      "top": 52,
+      "height": 1295.328125
+    },
+    {
+      "id": "kit-preview",
+      "text": "SEE THE KIT IN PRACTICE\nPREPARE \u2192 REVIEW\nFrom your ideas to a clearer conversation.\n\nUse the Client Workbook to organise what you know, what you want and what remains open. Bring that preparation into a conversation with your architect or geometra, using the Architect Handover to record the question",
+      "top": 1347.328125,
+      "height": 587.578125
+    },
+    {
+      "id": "why",
+      "text": "THE SUPPORTALY IDEA\nUNDERSTANDING BEFORE AGREEMENT\nThe same words can hide different expectations.\n\nYou describe the home you imagine. Your architect considers what needs checking. The conversation can feel clear while important assumptions remain unspoken.\n\nONE IDEA / THREE THINGS TO CLARIFY\n\n\u201cCan ",
+      "top": 1934.90625,
+      "height": 1201.90625
+    },
+    {
+      "id": "clarity",
+      "text": "YOUR STARTING POINT\nFIVE QUESTIONS / YOUR NEXT STEP\nFind your next useful step.\n\nFive questions to help you see what you can already explain, what remains open and what to prepare before speaking with your Italian architect or geometra.\n\nQUESTION 01 / 05\n\nCHANGES\n\nCan you explain what you want to ch",
+      "top": 3136.8125,
+      "height": 1802.921875
+    },
+    {
+      "id": "how-it-works",
+      "text": "HOW TO USE THE KIT\nPREPARE \u2192 CLARIFY \u2192 REVIEW\nPrepare your brief.\nReview it together.\n\nYou can begin before appointing an architect. Use the information you have, leave unanswered questions open and bring your preparation into the first professional conversation.\n\n1\nPrepare\n\nMake a working copy of t",
+      "top": 4939.734375,
+      "height": 1158.84375
+    },
+    {
+      "id": "inside",
+      "text": "THE CLARITY KIT\nSIX DOCUMENTS / ONE PURPOSE\n\nA CONNECTED SET OF TOOLS\n\nOne kit.\nSix documents.\n\nSix PDFs work together to help you prepare your brief, bring it into professional review and keep questions and decisions organised. Start with the complete kit, then explore the role of each document.\n\n\u2190",
+      "top": 6098.578125,
+      "height": 1750.40625
+    },
+    {
+      "id": "kit-fit",
+      "text": "WHAT THE KIT HELPS YOU DO\nPREPARATION / PROFESSIONAL REVIEW\nKnow what to prepare.\nKnow what to ask.\n\nBring your ideas, priorities and open questions into one shared reference for the conversation with your Italian architect or geometra.\n\nBring scattered ideas into one brief.\n\nDescribe your property,",
+      "top": 7848.984375,
+      "height": 1452.75
+    },
+    {
+      "id": "creator",
+      "text": "BEHIND SUPPORTALY\nEXPERIENCE IN ITALY AND GERMANY\n\nTHE IDEA BEHIND THE KIT\n\nWhy I created\nSupportaly.\n\nClarity before commitment.\n\nPhoto: Karolina Grabowska / Kaboompics\n\nI\u2019m an Italian architect and project manager with experience in Italy and Germany.\n\nI\u2019ve seen international clients struggle too ",
+      "top": 9301.734375,
+      "height": 833.5
+    },
+    {
+      "id": "offer",
+      "text": "THE CLARITY KIT\nA CLEARER WAY TO BEGIN\n\nWHY PREPARATION MATTERS\n\nStart with a clearer brief, not more assumptions.\n\nThe six documents help turn the things you know about your property and future home into information you can share, discuss and develop with your Italian architect or geometra.\n\nYou wi",
+      "top": 10135.234375,
+      "height": 1039.59375
+    },
+    {
+      "id": "faq",
+      "text": "BEFORE YOU BEGIN\nUSEFUL THINGS TO KNOW\n\nYOUR QUESTIONS\n\nFrequently asked questions\nExplore the Clarity Kit\n01 \u2014 What will the kit help me prepare?\n+\n02 \u2014 When should I start using it?\n+\n03 \u2014 What if much of my project is still uncertain?\n+\n04 \u2014 Which parts of the kit are bilingual?\n+\n05 \u2014 Can my arc",
+      "top": 11174.828125,
+      "height": 849.671875
+    },
+    {
+      "id": "next-step",
+      "text": "YOUR NEXT STEP\nEXPLORE BEFORE YOU BEGIN\nStart the conversation with less guesswork.\n\nExplore the six PDFs to see how the kit helps you prepare a brief, organise open questions and bring your priorities into professional review.\n\nExplore the Clarity Kit\n\u2197\n\nComing soon \u00b7 Not yet available to purchase ",
+      "top": 12024.5,
+      "height": 828.21875
+    },
+    {
+      "id": "",
+      "text": "SUPPORTALY.\n\nClarity before commitment.\n\nA shared starting point for international homeowners and Italian professionals planning renovations in Italy.\n\nEXPLORE\nStarting-point check\nExplore the Clarity Kit\nFor Italian professionals\nFAQs\nINFORMATION\nAccount / unavailable in preview\nImpressum\nCredits\nL",
+      "top": 12852.71875,
+      "height": 664.328125
+    }
+  ],
+  "brokenImages": []
+}

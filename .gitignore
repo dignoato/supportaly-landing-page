@@ -1,0 +1,3 @@
+artifacts/visual-comparison/**/*.png
+__pycache__/
+dist/

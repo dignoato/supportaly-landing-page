@@ -64,3 +64,80 @@ main .pro-editorial .pro-process h2{
  main .hero-copy .lede,main .hero-copy .lede p,main .manifesto .manifesto-story p{line-height:1.37;}
  main .pro-editorial .pro-context .lede-small p{line-height:1.48;}
 }
+
+/* Supportaly T01–T04 unified responsive heading sizes
+   Approved 2026-11-10. Typography sizes ONLY: existing font families, weights,
+   letter spacing, line heights, text, imagery and layout are not changed.
+   Values are fixed per agreed viewport band, not per-component overrides.
+   Desktop >=1200px, tablet 768–1199px, mobile <=767px. */
+:root {
+  --su-type-t01: 96px; /* display H1 */
+  --su-type-t02: 96px; /* large editorial H2 */
+  --su-type-t03: 56px; /* standard section H2 */
+  --su-type-t04: 32px; /* subheading H3 */
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  :root {
+    --su-type-t01: 72px;
+    --su-type-t02: 76px;
+    --su-type-t03: 48px;
+    --su-type-t04: 28px;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --su-type-t01: 44px;
+    --su-type-t02: 48px;
+    --su-type-t03: 36px;
+    --su-type-t04: 28px;
+  }
+}
+/* T01 — Hero, individual product, professional, legal and account page H1. */
+main .v6-hero.hero--step2 .hero-copy .hero-h1,
+main .product-summary h1,
+main .pro-editorial .pro-editorial-opening h1,
+main .legal-heading h1,
+body.account-body .auth-intro h1,
+body.account-body .account-title h1 {
+  font-size: var(--su-type-t01) !important;
+}
+/* T02 — main large-format editorial chapter headings. */
+main .shared-understanding .understanding-intro h2,
+main .v6-simple .section-heading h2,
+main .v6-kit .section-heading h2,
+main .v6-offer .supportaly-note h2,
+main .v6-final .final-copy h2,
+main .pro-editorial .pro-process h2,
+main .product-bottom-cta h2 {
+  font-size: var(--su-type-t02) !important;
+}
+/* T03 — standard section headings, including product content and FAQ. */
+main .kit-proof .kit-proof-copy h2,
+main .v6-clarity .section-heading h2,
+main .v6-comparison .comparison-intro h2,
+main .v6-faq .faq-heading h2,
+main #creator.creator-section h2,
+main .product-section-copy h2,
+main .product-callout h2,
+main .pro-editorial .boundary-note h3,
+main .legal-grid h2,
+body.account-body .auth-panel h2,
+body.account-body .account-panel-heading h2 {
+  font-size: var(--su-type-t03) !important;
+}
+/* T04 — content subheadings, question headings and product-card titles.
+   Footer headings, metadata, labels and buttons are intentionally excluded. */
+main .understanding-roles h3,
+main .v6-simple .three-steps h3,
+main .v6-kit .kit-card h3,
+main #kit-fit .kit-benefit h3,
+main #kit-fit .kit-fit-grid h3,
+main #clarity [data-guided-clarity] h3,
+main .product-feature h3,
+main .product-boundary h3,
+main .related-card h3,
+main .pro-editorial .professional-benefits h3,
+main .pro-editorial .pro-steps h3,
+main .legal-content h3 {
+  font-size: var(--su-type-t04) !important;
+}

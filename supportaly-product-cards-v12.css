@@ -87,3 +87,12 @@
 .v6-kit .bundle-cover-grid img{position:static!important;width:100%!important;height:100%!important;object-fit:cover!important;box-shadow:none!important;}
 .v6-kit .bundle-coming-soon{font-size:clamp(18px,1.8vw,25px)!important;letter-spacing:-.025em!important;}
 @media(max-width:767px){.v6-kit .kit-filters{gap:6px;margin-bottom:20px}.v6-kit .kit-filter{min-height:36px;padding:0 13px;font-size:10px}.v6-kit .bundle-cover-grid{padding:12px;gap:4px}}
+
+/* Modification 07 — Clarity Kit card title T04 size normalization.
+   The specific second/sixth-card rules in earlier CSS override the shared
+   heading token. Match their specificity, changing font-size only. */
+main .v6-kit .kit-card h3,
+main .v6-kit .kit-card:nth-child(2) h3,
+main .v6-kit .kit-card:nth-child(6) h3 {
+  font-size: var(--su-type-t04) !important;
+}
