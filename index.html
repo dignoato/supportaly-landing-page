@@ -24,15 +24,15 @@ main .kit-proof-copy p { max-width:520px; margin:0 0 24px; font:400 23px/1.35 va
 main .kit-proof-link { display:inline-flex; align-items:center; gap:16px; padding:8px 0; border-bottom:1px solid currentColor; font:700 14px/1.4 var(--supportaly-body-font,Arial,sans-serif); text-decoration:none; }
 main .kit-proof-pages { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; min-width:0; }
 main .kit-proof-pages figure { margin:0; min-width:0; }
-main .kit-proof-pages .preview-zoom { position:relative; display:block; width:100%; padding:16px; border:0; border-radius:0; background:#fff; cursor:zoom-in; }
-main .kit-proof-pages .preview-zoom img { display:block; width:100%; height:320px; object-fit:contain; object-position:top; }
+main .kit-proof-pages .preview-zoom { position:relative; display:block; width:100%; padding:0; border:0; border-radius:0; background:transparent; cursor:zoom-in; overflow:hidden; }
+main .kit-proof-pages .preview-zoom img { display:block; width:100%; height:auto; }
 main .kit-proof-pages .zoom-mark { position:absolute; right:8px; bottom:8px; font-size:22px; }
 main .kit-proof-pages figcaption { display:grid; gap:4px; padding-top:12px; font:400 14px/1.4 var(--supportaly-body-font,Arial,sans-serif); }
 main .kit-proof-pages figcaption strong { font-weight:700; }
 main .kit-proof a:focus-visible,main .kit-proof button:focus-visible { outline:2px solid #4f593a; outline-offset:4px; }
-@media(hover:hover) { main .kit-proof-link:hover { color:#515b40; } main .kit-proof-pages .preview-zoom:hover { background:#f7f7f4; } }
+@media(hover:hover) { main .kit-proof-link:hover { color:#515b40; } main .kit-proof-pages .preview-zoom:hover { background:transparent; } }
 @media(max-width:900px) { main .kit-proof-layout { grid-template-columns:1fr; gap:32px; } main .kit-proof-copy h2,main .kit-proof-copy p { max-width:680px; } }
-@media(max-width:767px) { main .kit-proof { padding:32px 20px 40px; } main .kit-proof-index { margin-bottom:24px; font-size:10px; } main .kit-proof-index span:last-child { text-align:right; } main .kit-proof-copy h2 { font-size:42px; } main .kit-proof-copy p { font-size:20px; } main .kit-proof-pages { gap:12px; } main .kit-proof-pages .preview-zoom { padding:8px; } main .kit-proof-pages .preview-zoom img { height:200px; } main .kit-proof-pages figcaption { font-size:12px; } }
+@media(max-width:767px) { main .kit-proof { padding:32px 20px 40px; } main .kit-proof-index { margin-bottom:24px; font-size:10px; } main .kit-proof-index span:last-child { text-align:right; } main .kit-proof-copy h2 { font-size:42px; } main .kit-proof-copy p { font-size:20px; } main .kit-proof-pages { grid-template-columns:minmax(0,1fr); gap:24px; } main .kit-proof-pages figcaption { font-size:12px; } }
 </style><style id="supportaly-opening-step2">
 /* Homepage only: replaces three repeated explanations with one illustrated example. */
 main .shared-understanding { padding:64px max(22px,1.6vw); background:#fff; color:#0b0b0a; }
